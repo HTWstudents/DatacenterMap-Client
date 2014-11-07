@@ -2,10 +2,58 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <title>Data Center Map</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>New Web Project</title>
-    </head>
-    <body>
-        <h1>New Web Project Page</h1>
-    </body>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <link type="text/css" href="style.css" rel="stylesheet" media="all"/>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCC9SXblH8n9ofoI4jgyt5t-AtrE3yWKpk&sensor=false"></script>
+    	<script type="text/javascript">
+    	/**
+    	 * Initializes the map 
+    	 * Center is set to center of Germany and zoom level fits german borders
+    	 */
+	      function initialize() {
+	        var mapOptions = {
+	          center: new google.maps.LatLng(51.235079, 10.299122),
+	          zoom: 6,
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        };
+	        var map = new google.maps.Map(document.getElementById("map"),
+	            mapOptions);
+	      }
+	      
+	      /**
+	       * Reads JSON formatted data from assets
+	       * Iterates through a the collection of objects drawing markers using {@link #drawCluster(datacenters drawCluster)} method
+	       */
+	      function readJSON(){
+	      	// TODO
+	      }
+	      
+	      /**
+	       * Draws a marker on the map for the given data center object
+	       */ 
+	      function drawCluster(datacenter){
+	      	// TODO
+	      }
+	      
+	      /**
+	       * Listenen to onZoomChanged() and reorganize clusters
+	       * If all objects of one cluster fit the current bounding box break cluster and draw them as individual markers
+	       */
+	      function reOrganizeCluster(){
+	      	// TODO
+	      }
+	      
+	      /**
+	       * Open a flighout window on the right hand side showing the details of the selected data center
+	       */
+	      function onMarkerClick(){
+	      	// TODO
+	      }
+    	</script>
+  	</head>
+  	<body onload="initialize()">
+   		<div id="map" style="width:100%; height:100%"></div>
+  	</body>
 </html>
