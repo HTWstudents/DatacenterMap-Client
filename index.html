@@ -20,6 +20,33 @@
 	        };
 	        var map = new google.maps.Map(document.getElementById("map"),
 	            mapOptions);
+	            
+	      	// MockData
+	      	var markerHamburg = new google.maps.Marker({
+	      		position: new google.maps.LatLng(53.537766, 9.999919),
+	      		map: map,
+	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/green/marker11.png"
+	      	});
+	      	var markerBerlin = new google.maps.Marker({
+	      		position: new google.maps.LatLng(52.514784, 13.404819),
+	      		map: map,
+	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/orange/marker21.png"
+	      	});
+	      	var markerFrankfurt = new google.maps.Marker({
+	      		position: new google.maps.LatLng(50.100295, 8.680852),
+	      		map: map,
+	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/red/marker33.png"
+	      	});
+	      	var markerKoeln = new google.maps.Marker({
+	      		position: new google.maps.LatLng(50.934965, 6.975219),
+	      		map: map,
+	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/orange/marker5.png"
+	      	});
+	      	var markerKoeln = new google.maps.Marker({
+	      		position: new google.maps.LatLng(48.127648, 11.576511),
+	      		map: map,
+	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/green/marker14.png"
+	      	});
 	      }
 	      
 	      /**
@@ -54,6 +81,8 @@
     	</script>
   	</head>
   	<body onload="initialize()">
-   		<div id="map" style="width:100%; height:100%"></div>
+   		<div id="map">
+   			<div id="sidebar"></div>
+   		</div>
   	</body>
 </html>
