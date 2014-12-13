@@ -1,88 +1,55 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Data Center Map</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-        <link type="text/css" href="style.css" rel="stylesheet" media="all"/>
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCC9SXblH8n9ofoI4jgyt5t-AtrE3yWKpk&sensor=false"></script>
-    	<script type="text/javascript">
-    	/**
-    	 * Initializes the map 
-    	 * Center is set to center of Germany and zoom level fits german borders
-    	 */
-	      function initialize() {
-	        var mapOptions = {
-	          center: new google.maps.LatLng(51.235079, 10.299122),
-	          zoom: 6,
-	          mapTypeId: google.maps.MapTypeId.ROADMAP
-	        };
-	        var map = new google.maps.Map(document.getElementById("map"),
-	            mapOptions);
-	            
-	      	// MockData
-	      	var markerHamburg = new google.maps.Marker({
-	      		position: new google.maps.LatLng(53.537766, 9.999919),
-	      		map: map,
-	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/green/marker11.png"
-	      	});
-	      	var markerBerlin = new google.maps.Marker({
-	      		position: new google.maps.LatLng(52.514784, 13.404819),
-	      		map: map,
-	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/orange/marker21.png"
-	      	});
-	      	var markerFrankfurt = new google.maps.Marker({
-	      		position: new google.maps.LatLng(50.100295, 8.680852),
-	      		map: map,
-	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/red/marker33.png"
-	      	});
-	      	var markerKoeln = new google.maps.Marker({
-	      		position: new google.maps.LatLng(50.934965, 6.975219),
-	      		map: map,
-	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/orange/marker5.png"
-	      	});
-	      	var markerKoeln = new google.maps.Marker({
-	      		position: new google.maps.LatLng(48.127648, 11.576511),
-	      		map: map,
-	      		icon: "https://gmaps-samples.googlecode.com/svn/trunk/markers/green/marker14.png"
-	      	});
-	      }
-	      
-	      /**
-	       * Reads JSON formatted data from assets
-	       * Iterates through a the collection of objects drawing markers using {@link #drawCluster(datacenters drawCluster)} method
-	       */
-	      function readJSON(){
-	      	// TODO
-	      }
-	      
-	      /**
-	       * Draws a marker on the map for the given data center object
-	       */ 
-	      function drawCluster(datacenter){
-	      	// TODO
-	      }
-	      
-	      /**
-	       * Listenen to onZoomChanged() and reorganize clusters
-	       * If all objects of one cluster fit the current bounding box break cluster and draw them as individual markers
-	       */
-	      function reOrganizeCluster(){
-	      	// TODO
-	      }
-	      
-	      /**
-	       * Open a flighout window on the right hand side showing the details of the selected data center
-	       */
-	      function onMarkerClick(){
-	      	// TODO
-	      }
-    	</script>
+        <meta charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="libs/bootstrap.min.css">
+		<link rel="stylesheet" href="libs/bootstrap-theme.min.css">
+
   	</head>
-  	<body onload="initialize()">
-   		<div id="map">
-   			<div id="sidebar"></div>
-   		</div>
+  	<body>
+   		<header>
+			<nav role="navigation">
+				<div class="container-fluid navbar-inverse">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" style="padding-left: 7px; padding-top: 7px">
+							<span class="text-success" style="font-size: x-large">
+								<img src="assets/images/brand-icon.png" style="max-width: 36px; max-height: 36px;">
+								Green Datacenters
+							</span>
+						</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+							<li> <a href="#">Fragebogen<span class="sr-only">(current)</span></a></li>
+							<li> <a href="#">Karte<span class="sr-only">(current)</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<div>
+			<!-- content placeholder -->
+		</div>
+
+		<footer class="panel-footer">
+			this is my footer section
+			<!-- Links, Contact, Legal -->
+		</footer>
+
+		<script src="libs/jquery-1.11.1.min.js"></script>
+		<script src="libs/bootstrap.min.js"></script>
   	</body>
 </html>
