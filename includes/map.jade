@@ -1,0 +1,19 @@
+section.section-map
+    .container
+        .map-heading.text-center.center-block
+            h1(id="map") Karte
+            hr
+            p In der Karte werden alle durch die App registrierten Rechenzentren an ihrem Standort angezeigt. Mit einem Klick auf ein Rechenzentrum werden zusätzliche Informationen dargestellt.
+        .map-content
+            .row
+                .col-md-3
+
+                .col-md-6.col-xs-12
+                    .input-group
+                        input(type="text", placeholder="Suchen").form-control
+                        span.input-group-btn
+                            button(type="button").btn.btn-default
+                                span.glyphicon.glyphicon-search
+                .col-md-3
+
+            .map-canvas(id="map-canvas")
