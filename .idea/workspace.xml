@@ -2,42 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc87ba92-3312-4d53-89b3-d9bd9bccd740" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/Rechenzentrum.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/0-plugins/SectionSeparators/SectionSeparators.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/app.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/1-base/base-dir.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/footer.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2-layouts/footer.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/header.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2-layouts/header.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/1-base/heading.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/intro.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2-layouts/intro.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2-layouts/layouts-dir.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/map.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2-layouts/map.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/modernizr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/paper.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2-layouts/paper.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/0-plugins/plugins-dir.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/survey.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2-layouts/survey.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/brand-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/bootstrap/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/bootstrap/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/bootstrap/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/bootstrap/jquery-1.11.1.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directive/DirModule.js" afterPath="$PROJECT_DIR$/js/directive/DirModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/MainModule.js" afterPath="$PROJECT_DIR$/js/MainModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services/ServiceModule.js" afterPath="$PROJECT_DIR$/js/services/ServiceModule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/angular/angular.min.js" afterPath="$PROJECT_DIR$/libs/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/docu.md" afterPath="$PROJECT_DIR$/documentation/docu.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css.map" afterPath="$PROJECT_DIR$/css/app.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/app.css" afterPath="$PROJECT_DIR$/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/intro.jade" afterPath="$PROJECT_DIR$/includes/intro.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/2-layouts/intro.sass" afterPath="$PROJECT_DIR$/css/2-layouts/intro.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/map.jade" afterPath="$PROJECT_DIR$/includes/map.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/2-layouts/map.sass" afterPath="$PROJECT_DIR$/css/2-layouts/map.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/paper.jade" afterPath="$PROJECT_DIR$/includes/paper.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/survey.jade" afterPath="$PROJECT_DIR$/includes/survey.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DataCenterMap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +38,18 @@
       <file leaf-file-name="map.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/2-layouts/map.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4340278" vertical-offset="0" max-vertical-offset="864">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.36458334" vertical-offset="0" max-vertical-offset="864">
+              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/map.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <caret line="5" column="193" selection-start-line="2" selection-start-column="8" selection-end-line="5" selection-end-column="193" />
               <folding />
             </state>
           </provider>
@@ -81,21 +65,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/map.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="heading.sass" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/1-base/heading.sass">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="135">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="survey.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/survey.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intro.sass" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/2-layouts/intro.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="570">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="intro.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/intro.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -134,27 +138,27 @@
         <option value="$PROJECT_DIR$/css/1-layouts/header.sass" />
         <option value="$PROJECT_DIR$/css/1-layouts/layouts-dir.sass" />
         <option value="$PROJECT_DIR$/css/1-layouts/intro.sass" />
-        <option value="$PROJECT_DIR$/includes/intro.jade" />
         <option value="$PROJECT_DIR$/css/1-layouts/footer.sass" />
         <option value="$PROJECT_DIR$/js/mapTest.js" />
         <option value="$PROJECT_DIR$/css/0-plugins/component.sass" />
-        <option value="$PROJECT_DIR$/includes/survey.jade" />
         <option value="$PROJECT_DIR$/css/0-plugins/SectionSeparators /SectionSeparators.sass" />
         <option value="$PROJECT_DIR$/css/0-plugins/plugins-dir.sass" />
         <option value="$PROJECT_DIR$/css/0-plugins/SectionSeparators/css/component.css" />
         <option value="$PROJECT_DIR$/css/1-layouts/survey.sass" />
         <option value="$PROJECT_DIR$/index.jade" />
-        <option value="$PROJECT_DIR$/includes/paper.jade" />
         <option value="$PROJECT_DIR$/css/1-layouts/paper.sass" />
         <option value="$PROJECT_DIR$/includes/header.jade" />
         <option value="$PROJECT_DIR$/css/1-layouts/map.sass" />
         <option value="$PROJECT_DIR$/css/1-base/base-dir.sass" />
         <option value="$PROJECT_DIR$/css/app.sass" />
-        <option value="$PROJECT_DIR$/css/2-layouts/intro.sass" />
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/map.js" />
-        <option value="$PROJECT_DIR$/includes/map.jade" />
         <option value="$PROJECT_DIR$/css/1-base/heading.sass" />
+        <option value="$PROJECT_DIR$/includes/map.jade" />
+        <option value="$PROJECT_DIR$/includes/paper.jade" />
+        <option value="$PROJECT_DIR$/includes/survey.jade" />
+        <option value="$PROJECT_DIR$/includes/intro.jade" />
+        <option value="$PROJECT_DIR$/css/2-layouts/intro.sass" />
         <option value="$PROJECT_DIR$/css/2-layouts/map.sass" />
       </list>
     </option>
@@ -313,28 +317,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="2-layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataCenterMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataCenterMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2-layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intro.sass" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -723,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/intro.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/2-layouts/footer.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.034722224" vertical-offset="0" max-vertical-offset="864">
@@ -753,14 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
           <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/survey.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -797,26 +764,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/paper.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/2-layouts/paper.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.052083332" vertical-offset="0" max-vertical-offset="864">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -849,14 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="888">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/2-layouts/intro.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="540">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -909,6 +852,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/1-base/heading.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
@@ -917,21 +871,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/map.jade">
+    <entry file="file://$PROJECT_DIR$/includes/paper.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/1-base/heading.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.08445946" vertical-offset="0" max-vertical-offset="888">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -944,10 +887,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/survey.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <caret line="5" column="77" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/intro.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/2-layouts/intro.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="570">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/map.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="5" column="193" selection-start-line="2" selection-start-column="8" selection-end-line="5" selection-end-column="193" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/2-layouts/map.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4340278" vertical-offset="0" max-vertical-offset="864">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.36458334" vertical-offset="0" max-vertical-offset="864">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
           <folding />
         </state>
       </provider>
