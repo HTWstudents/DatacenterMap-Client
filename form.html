@@ -244,11 +244,213 @@
 					<label>Umluftklimaschrank in seperatem Raum</label>
 				</p>
 				<p>
+					<input type="checkbox" id="checkbox_umluftklimaschrank_außenluftanteil" name="checkbox_umluftklimaschrank:außenluftanteil" />
+					<label>Umluftklimaschrank mit Außenluftanteil</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_splitklimageräte" name="checkbox_splitklimageräte" />
+					<label>Splitklimageräte</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_multisplitgeräte" name="checkbox_multisplitgeräte" />
+					<label>Multisplitgeräte</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_klimaanlage_außenluftanschluss" name="checkbox_klimaanlage_außenluftanschluss" />
+					<label>Klimaanlage mit direktem Außenluftanschluss</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_außenluftanteil_rlt_anlage" name="checkbox_außenluftanteil_rlt_anlage" />
+					<label>Außenluftanteil über seperate RLT-Anlage</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_wassergekühlt" name="checkbox_wassergekühlt" />
+					<label>wassergekühlte Racks</label>
+				</p>
+				<p>
 					<input type="checkbox" id="checkbox_sonstiges_klimasystem" name="checkbox_sonstiges_klimasystem" />
 					<label>Sonstiges: </label>
 					<input type="text" id="sonstiges_klimasystem" name="sonstiges_klimasystem" size="50" />
 				</p>
-				
+				<p>
+					<label>Installierte Kälteleistung im Raum ohne Redundanz</label>
+				</p>
+				<p>
+					<input type="text" id="kälteleistung_ohne_redundanz" name="kälteleistung_ohne_redundanz" size="50" placeholder="Angabe in Watt, kW o.ä." />
+				</p>
+				<p>
+					<label>Installierte Kälteleistung im Raum mit Redundanz</label>
+				</p>
+				<p>
+					<input type="text" id="kälteleistung_mit_redundanz" name="kälteleistung_mit_redundanz" size="50" placeholder="Angabe in Watt, kW o.ä." />
+				</p>
+				<p>
+					<label>Werden nicht benötigte Klimaanlagen ausgeschalten?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_klimaanlagen_ausschalten_ja" name="checkbox_klimaanlagen_ausschalten_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_klimaanlagen_ausschalten_nein" name="checkbox_klimaanlagen_ausschalten_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Werden nicht benötigte Klimaanlagen bewusst nicht ausgeschalten, da ein gemeinsamer Betrieb aller Anlagen energieeffizienter ist?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_klimaanlagen_ja" name="checkbox_klimaanlagen_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_klimaanlagen_nein" name="checkbox_klimaanlagen_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Eingesetzte Kühlmedien</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_wasser" name="checkbox_wasser" />
+					<label>Wasser</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_wasser_glykol" name="checkbox_wasser_glykol" />
+					<label>Wasser/Glykol Gemisch</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_kältemittel" name="checkbox_kältemittel" />
+					<label>Kältemittel (bitte unter Sonstiges angeben)</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_sonstiges_kühlmedien" name="checkbox_sonstiges_kühlmedien" />
+					<label>Sonstiges: </label>
+					<input type="text" id="sonstiges_kühlmedien" name="sonstiges_kühlmedien" size="50" />
+				</p>
+				<p>
+					<label>Wird entstehende Abwärme genutzt?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_abwärme_ja" name="checkbox_abwärme_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_abwärme_nein" name="checkbox_abwärme_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Wenn ja, wo wird die zurückgewonnene Abwärme eingesetzt?</label>
+				</p>
+				<p>
+					<input type="text" id="abwärme" name="abwärme" size="50" placeholder="" />
+				</p>
+				<p>
+					<label>Wird das Kalt-Warmang-Prinzip eingehalten?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_kaltwarmgang_ja" name="checkbox_kaltwarmgang_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_kaltwarmgang_nein" name="checkbox_kaltwarmgang_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Sind Hot Spots/Wärmenester in den Racks vorhanden?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_hotspots_ja" name="checkbox_hotspots_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_hotspots_nein" name="checkbox_hotspots_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_hotspots_teilweise" name="checkbox_hotspots_teilweise" />
+					<label>Teilweise</label>
+				</p>
+				<p>
+					<label>Bestehen Hindernisse in der Zuluftführung? (z.B. Kabeltrassen im Doppelboden, Rohrleitungen, etc.)</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_zuluftführung_ja" name="checkbox_zuluftführung_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_zuluftführung_nein" name="checkbox_zuluftführung_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Bestehen Hindernisse in der Abluftführung? (z.B. Kanäle, Unterzüge, Leuchten, etc.)</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_abluftführung_ja" name="checkbox_abluftführung_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_abluftführung_nein" name="checkbox_abluftführung_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<b>
+					    <label>Infrastruktur/Rackausführung</label>
+					</b>
+				</p>
+				<p>
+					<label>Bereitstellungsverfahren der Anwendungen</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_dezentral" name="checkbox_dezentral" />
+					<label>Dezentral (PC-Systeme, Notebooks)</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_zentral" name="checkbox_zentral" />
+					<label>Zentral (Terminalserver, Virtuell, Web) </label>
+				</p>
+				<p>
+					<label>Wird Storagevirtualisierung eingesetzt?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_storagevirtualisierung_ja" name="checkbox_storagevirtualisierung_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_storagevirtualisierung_nein" name="checkbox_storagevirtualisierung_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Wird Servervirtualisierung eingesetzt?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_servervirtualisierung_ja" name="checkbox_servervirtualisierung_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_servervirtualisierung_nein" name="checkbox_servervirtualisierung_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Ist ein System Management Tool vorhanden, das sich zur Realisierung von Energieeinsparpotenzialen eignet?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_systemmgmttool_ja" name="checkbox_systemmgmttool_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_systemmgmttool_nein" name="checkbox_systemmgmttool_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Wird ein Netzwerk Management Tool verwendet, das sich zur Realisierung von Energieeinsparpotenzialen eignet?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_netzwerkmgmttool_ja" name="checkbox_netzwerkmgmttool_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_netzwerkmgmttool_nein" name="checkbox_netzwerkmgmttool_nein" />
+					<label>Nein</label>
+				</p>
 				
 			</form>
 
