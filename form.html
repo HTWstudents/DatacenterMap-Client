@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fragebogen zur Beurteilung von Rechenzentren</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Dies ist eine Seite auf der ein Fragebogen zur Beurteilung von Rechenzentren bereitgestellt wird.">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">		
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]--> 
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Fragebogen zur Beurteilung von Rechenzentren</h1>
+				<nav>
+					
+				</nav>
+			</header>
+			<form action="" method="post">
+				<p>
+					<b>
+						<label>Allgemeine Angaben</label>
+					</b>
+				</p>
+				<p>
+				    <label>Name des Unternehmens</label>
+				</p>
+				<p>
+				    <input type="text" id="company_name" name="company_name" size="50" placeholder="Mustermann GmbH" required />
+				</p>
+				<p>
+				    <label>Standort des Rechenzentrums/der Rechenzentren</label>
+				</p>
+				<p>
+				    <input type="text" id="datacenter_location" name="datacenter_location" size="80" placeholder="Bspw. Munich1, NRW2, Berlin Mitte" />
+				</p>
+				<p>
+					<label>Anzahl der Serverräume</label>
+				</p>
+				<p>
+					<input type="number" id="serverrooms" name="serverrooms" size="10" placeholder="5" />
+				</p>
+				<p>
+					<label>Anzahl der Server in einem Serverraum</label>
+				</p>
+				<p>
+					<input type="number" id="servers_in_serverroom" name="servers_in_serverroom" size="10" placeholder="30" />
+				</p>
+				<p>
+					<label>Höhe des monatlichen Traffics des Rechenzentrums</label>
+				</p>
+				<p>
+					<input type="text" id="datacenter_traffic" name="datacenter_traffic" size="50" placeholder="Bspw. 9,3 TB" />
+				</p>
+				<p>
+					<label>Höhe des monatlichen Traffics eines Servers</label>
+				</p>
+				<p>
+					<input type="text" id="server_traffic" name="server_traffic" size="50" placeholder="Bspw. 120 GB" />
+				</p>
+				<p>
+					<b>
+					    <label>Angaben zu Zertifizierungen</label>
+					</b>
+				</p>
+				<p>
+					<label>Haben Sie bereits eine, mehrere oder keine der folgenden Zertifizierungen?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_blauer_engel" name="checkbox_blauer_engel" />
+					<label>Blauer Engel</label>
+				</p>	
+				<p>
+					<input type="checkbox" id="checkbox_emas" name="checkbox_emas" />
+					<label>EMAS</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_iso14001" name="checkbox_iso14001" />
+					<label>ISO 14001</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_iso50001" name="checkbox_iao50001" />
+					<label>ISO 50001</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_dcsa" name="checkbox_dcsa" />
+					<label>Datacenter Star Audit (DCSA)</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_keine" name="checkbox_keine" />
+					<label>Keine Zertifizierung</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_sonstige" name="checkbox_sonstige" />
+					<label>Sonstige: </label>
+					<input type="text" id="sonstige_zertifizierungen" name="sonstige_zertifizierungen" size="50" />
+				</p>
+				<p>
+					<b>
+					    <label>Angaben zur Stromversorgung</label>
+					</b>
+				</p>
+				<p>
+					<label>Welchen Stromanbieter nutzen Sie?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_rwe" name="checkbox_rwe" />
+					<label>RWE AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_enbw" name="checkbox_enbw" />
+					<label>EnBW AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_eon" name="checkbox_eon" />
+					<label>E.ON AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_vattenfall" name="checkbox_vattenfall" />
+					<label>Vattenfall Europe AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_ewe" name="checkbox_ewe" />
+					<label>EWE AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_rheinenergie" name="checkbox_rheinenergie" />
+					<label>RheinEnergie AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_mvv" name="checkbox_mvv" />
+					<label>MVV Energie AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_nenergie" name="checkbox_nenergie" />
+					<label>N-Energie AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_pfalzwerke" name="checkbox_pfalzwerke" />
+					<label>Pfalzwerke AG</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_stadtwerke" name="checkbox_stadtwerke" />
+					<label>Stadtwerke</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_eigenversorgung" name="checkbox_eigenversorgung" />
+					<label>Eigene Energiegewinnung</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_sonstiger_energieanbieter" name="checkbox_sonstiger_energieanbieter" />
+					<label>Sonstige: </label>
+					<input type="text" id="sonstiger_energieanbieter" name="sonstiger_energieanbieter" size="50" />
+				</p>
+				<p>
+					<label>Welchen Tarif nutzen Sie bei ihrem Anbieter?</label>
+				</p>
+				<p>
+					<input type="text" id="tarif" name="tarif" size="80" placeholder="Bspw. Profi12 Strom, Gewerbe Strom, E.ON ProfiStrom eFix" />
+				</p>
+				<p>
+					<label>Ist der Gesamtstromverbrauch des Rechenzentrums bekannt?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_stromverbrauch_ja" name="checkbox_stromverbrauch_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_stromverbrauch_nein" name="checkbox_stromverbrauch_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Wenn ja, wie hoch ist der Gesamtstromverbrauch des Rechenzentrums?</label>
+				</p>
+				<p>
+					<input type="text" id="gesamtstromverbrauch" name="gesamtstromverbrauch" size="50" placeholder="Bspw. in kWh/Monat oder MWh/Jahr" />
+				</p>
+				<p>
+					<label>Ist der Gesamtstromverbrauch der Klimatisierung bekannt?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_stromverbrauch_klimatisierung_ja" name="checkbox_stromverbrauch_klimatisierung_ja" />
+					<label>Ja</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_stromverbrauch_klimatisierung_nein" name="checkbox_stromverbrauch_klimatisierung_nein" />
+					<label>Nein</label>
+				</p>
+				<p>
+					<label>Wenn ja, wie hoch ist der Gesamtstromverbrauch des Klimatisierung?</label>
+				</p>
+				<p>
+					<input type="text" id="gesamtstromverbrauch_klimatisierung" name="gesamtstromverbrauch_klimatisierung" size="50" placeholder="Bspw. in kWh/Monat oder kWh/Jahr" />
+				</p>
+				<p>
+					<label>Welche Leistung hat die USV?</label>
+				</p>
+				<p>
+					<input type="text" id="usv" name="usv" size="50" placeholder="Angabe in Watt, kW o.ä." />
+				</p>
+				<p>
+					<label>Werden Stromspartechnologien eingesetzt?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_dynamische_sst" name="checkbox_dynamische_sst" />
+					<label>Dynamische Stromspartechnologien, die die Frequenz und Spannung der Prozessoren abhängig von der Auslastung automatisch regeln</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_energiesparmodus" name="checkbox_energiesparmodus" />
+					<label>Schalten sich die Server selbstständig in einen Energiesparmodus?</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_sonstige_sst" name="checkbox_sonstige_sst" />
+					<label>Sonstige: </label>
+					<input type="text" id="sonstige_sst" name="sonstige_sst" size="50" />
+				</p>
+				<p>
+					<b>
+					    <label>Angaben zur Klimatisierung</label>
+					</b>
+				</p>
+				<p>
+					<label>Welches Klimasystem wird verwendet? (Mehrfachnennungen möglich)</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_zentrale_klimaanlage" name="checkbox_zentrale_klimaanlage" />
+					<label>Klimatisierung über zentrale Klimaanlage</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_eigenständige_klimaanlage" name="checkbox_eigenständige_klimaanlage" />
+					<label>Eigenständige Klimaanlage</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_umluftklimaschrank" name="checkbox_umluftklimaschrank" />
+					<label>Umluftklimaschrank im Raum</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_umluftklimaschrank_seperat" name="checkbox_umluftklimaschrank_seperat" />
+					<label>Umluftklimaschrank in seperatem Raum</label>
+				</p>
+				<p>
+					<input type="checkbox" id="checkbox_sonstiges_klimasystem" name="checkbox_sonstiges_klimasystem" />
+					<label>Sonstiges: </label>
+					<input type="text" id="sonstiges_klimasystem" name="sonstiges_klimasystem" size="50" />
+				</p>
+				
+				
+			</form>
+
+			<div>
+
+			</div>
+
+			<footer>
+				<p>
+					&copy; Copyright by HTW Berlin
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
