@@ -1,0 +1,31 @@
+section
+  font-family: "Roboto 2", "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: #777777
+
+.container
+  padding: 0px
+
+.heading
+  max-width: 720px
+  padding: 10px
+
+  h1
+    &:target
+      padding-top: 65px
+
+  hr
+    display: block
+    height: 2px
+    margin: 0px
+    background-color: gray
+
+  p
+    font-size: 18px
+    padding: 5px
+
+.map-content
+  @include padding(20px null 20px null)
+
+.map-canvas
+  height: 90vh
+  background-color: aqua

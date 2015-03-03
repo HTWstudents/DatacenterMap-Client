@@ -1,0 +1,26 @@
+doctype html
+html(lang="de")
+    head
+        title Benchmark
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+        link(rel="stylesheet", href="css/app.css")
+        script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCC9SXblH8n9ofoI4jgyt5t-AtrE3yWKpk")
+        script(src="js/map.js")
+
+    body(onload="initialize()")
+
+        <!-- include separately designed sections -->
+        include includes/header
+        include includes/intro
+        include includes/map
+        include includes/survey
+        include includes/paper
+        include includes/footer
+
+        <!-- load script here to improve map rendering time -->
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
+
+

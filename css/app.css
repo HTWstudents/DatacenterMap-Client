@@ -1,0 +1,86 @@
+@import url(css/normalize.css);
+@import url(css/component.css);
+@import url(css/demo.css);
+@import url(css/icons.css);
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+header {
+  padding: 25px;
+  background: grey;
+  font-family: "Roboto 2", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+section.intro {
+  background: black; }
+  section.intro .container-fluid {
+    padding: 0px; }
+  section.intro .hero {
+    height: 100vh;
+    opacity: 0.4;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url("../assets/images/Rechenzentrum.jpg");
+    background-size: cover; }
+    section.intro .hero:target {
+      margin-top: 50px; }
+    section.intro .hero .description {
+      max-width: 500px;
+      padding: 20px;
+      align-self: center;
+      font-family: "Roboto 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: aqua;
+      margin-bottom: 10%; }
+      section.intro .hero .description h1 {
+        font-size: 48px; }
+      section.intro .hero .description p {
+        font-size: 28px; }
+
+section {
+  font-family: "Roboto 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777777; }
+
+.container {
+  padding: 0px; }
+
+.heading {
+  max-width: 720px;
+  padding: 10px; }
+  .heading h1:target {
+    padding-top: 65px; }
+  .heading hr {
+    display: block;
+    height: 2px;
+    margin: 0px;
+    background-color: gray; }
+  .heading p {
+    font-size: 18px;
+    padding: 5px; }
+
+.map-content {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.map-canvas {
+  height: 90vh;
+  background-color: aqua; }
+
+section.survey {
+  height: 100vh;
+  background: peachpuff; }
+
+.paper {
+  height: 100vh;
+  background: forestgreen; }
+
+footer {
+  height: 300px;
+  background: yellow; }
+
+/*# sourceMappingURL=app.css.map */
