@@ -76,14 +76,27 @@ Dazu bietet Bootstrap die Möglichkeit Elemente reihenweise über eine feste Anz
 ein HTML-Element bei einer bestimmten Bildschirmgröße (xs, sd, md und lg) einnehmen soll. So wird das Layout responsive.
 
 #### Backend
-#### Express.js
+##### Express.js
 -- Aufbau des Servers. Wie werden Anfragen verarbeitet? URL-Routing. vielleicht eigene REST API enwickeln
-#### Mongoose
+##### Mongoose
 Mongoose ist eine Node.js Module, welches die Interaktion mit MongoDB vereinfacht.
-#### Angular Module
+##### Angular Module
 -- Businesslogik in eigene Module packen. Controller für bestimmte Views.
-#### Angular Services
+##### Angular Services
 -- Mongoose Service
 -- Angular.Ressource Service
 
+#### Boilerplates und Generatoren
+**(Wir haben allerdings einen "from scratch" Ansatz! Doch ist das aus Forschungssicht "nice to know")**
+##### MEAN.js
+##### Yoeman
 
+#### Grunt Taskmanager
+-- Was ist Grunt!? Workflow + Vorteile beschreiben
+
+#### Karma JavaScript Tests
+
+#### Virtual Box und Vagrant
+Tools um einen lokalen Ubuntu Server aufzusetzen. Wenn man im Team entwickelt, ist es essentiell die gleiche Entwicklungsumgebung zu haben um Inkompatibilitäten und Versionsfehler zu vermeden. Ein guter Workflow ist dieser eine virtuelle Maschine
+mit Virtual Box zu installieren. Vagrant ist ein Tools um den Installations- und Initialisierungsprozess zu vereinfachen. Außerdem lassen sich Virtuelle Maschinen über die Komandozeile starten, verwalten und schließen. Vagrant erlaubt es URL's für die IP Adressen der Virtuelle Maschine zu definieren.
+Wenn man diese im Browser aufruft, zeigt dieser das Webprojekt so an als wäre es schon in Produktion.
