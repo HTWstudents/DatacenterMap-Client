@@ -17,20 +17,22 @@ function initialize() {
     createMarker();
 }
 
+
+
 //create Marker & Cluster them
 function createMarker() {
     var markers = [];
-    var imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=16x24&chco=rgb(0, 0, 0)&ext=.png';
+    var imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=16x24&chco=red&ext=.png';
     var markerImage = new google.maps.MarkerImage(imageUrl,
         new google.maps.Size(16, 24));
     $.getJSON("assets/json/newDatacenters.json", function (json1) {
         $.each(json1, function (key, data) {
-           {
-
+            {
                 var latlng = new google.maps.LatLng(data.lat, data.lng);
                 var marker = new google.maps.Marker({
                     map: map,
                     position: latlng,
+                    icon: markerImage,
                     name: data.name,
                     strasse: data.strasse,
                     hausnummer: data.hausnummer,
@@ -43,11 +45,31 @@ function createMarker() {
                     score3: data.score3,
                     score4: data.score4,
 
-                    //correct url: var imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=24x32&' + 'chco=//COLOR_HERE//&ext=.png';
-                    icon: markerImage
+                    /* Not tested
+                    //correct url: http://chart.apis.google.com/chart?cht=mm&chs=16x24&chco=red&ext=.png
+                    icon: function (data) {
+                         // if overall Score is between 25 and 50 we will use a red marker
+                         if (data.overallScore > 25 || data.overallScore < 50) {
+                           imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=16x24&chco=red&ext=.png';
+                       };
+                     //if overall Score is between 50 and 75 we will use a yellow marker
+                       if (data.overallScore > 50 || data.overallScore < 75) {
+                             imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=16x24&chco=yellow&ext=.png';
+                         };
+                     //if overall Score is greater than 75 we will use a green marker
+                       if (data.overallScore > 75)  {
+                             imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=16x24&chco=green&ext=.png';
+                         }
+                     //if something went wrong we will use a blue marker
+                         else {
+                           imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=16x24&' +
+                           'chco=blue&ext=.png';
+                       }
+                         return markerImage;
+                     },*/
+
+                title: data.name
                 });
-               console.log(data.score4);
-               console.log(createRGB(data.score4));
                 markers.push(marker);
 
                 //onclick event listener
@@ -156,5 +178,7 @@ function drawPieChart() {
         size: 120 //WIDTH - HEIGHT OF SKILL CHART(SHOULD BE IN SQUARE) -  SHOULD BE EQUAL - Like 200px
     });
 }
+
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
