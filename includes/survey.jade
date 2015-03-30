@@ -1,511 +1,348 @@
-section#survey
-    .container
-        .heading.text-center.center-block
-            h1(id="survey") Fragebogen
-            hr
-            p Fragebogen beinhaltet alle für ein Audit relavanten Themen. Diese sind nach ökologischen Aspekten gewichtet.
-
-        .survey
-            form(action='', method='post')
-                p
-                    b
-                        label Allgemeine Angaben
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Name des Unternehmens
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#company_name(type='text', name='company_name', size='50', placeholder='Mustermann GmbH', required='')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Standort des Rechenzentrums/der Rechenzentren
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#datacenter_location(type='text', name='datacenter_location', size='80', placeholder='Bspw. Munich1, NRW2, Berlin Mitte')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Anzahl der Serverr&auml;ume
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#serverrooms(type='number', name='serverrooms', size='10', placeholder='5')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Anzahl der Server in einem Serverraum
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#servers_in_serverroom(type='number', name='servers_in_serverroom', size='10', placeholder='30')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label H&ouml;he des monatlichen Traffics des Rechenzentrums
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#datacenter_traffic(type='text', name='datacenter_traffic', size='50', placeholder='Bspw. 9,3 TB')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label H&ouml;he des monatlichen Traffics eines Servers
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#server_traffic(type='text', name='server_traffic', size='50', placeholder='Bspw. 120 GB')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    b
-                        label Angaben zu Zertifizierungen
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Haben Sie bereits eine, mehrere oder keine der folgenden Zertifizierungen?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_blauer_engel(type='checkbox', name='checkbox_blauer_engel')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Blauer Engel
-                | &#x9;
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_emas(type='checkbox', name='checkbox_emas')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label EMAS
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_iso14001(type='checkbox', name='checkbox_iso14001')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label ISO 14001
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_iso50001(type='checkbox', name='checkbox_iao50001')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label ISO 50001
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_dcsa(type='checkbox', name='checkbox_dcsa')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Datacenter Star Audit (DCSA)
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_keine(type='checkbox', name='checkbox_keine')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Keine Zertifizierung
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_sonstige(type='checkbox', name='checkbox_sonstige')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Sonstige:
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    input#sonstige_zertifizierungen(type='text', name='sonstige_zertifizierungen', size='50')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    b
-                        label Angaben zur Stromversorgung
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Welchen Stromanbieter nutzen Sie?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_rwe(type='checkbox', name='checkbox_rwe')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label RWE AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_enbw(type='checkbox', name='checkbox_enbw')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label EnBW AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_eon(type='checkbox', name='checkbox_eon')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label E.ON AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_vattenfall(type='checkbox', name='checkbox_vattenfall')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Vattenfall Europe AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_ewe(type='checkbox', name='checkbox_ewe')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label EWE AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_rheinenergie(type='checkbox', name='checkbox_rheinenergie')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label RheinEnergie AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_mvv(type='checkbox', name='checkbox_mvv')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label MVV Energie AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_nenergie(type='checkbox', name='checkbox_nenergie')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label N-Energie AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_pfalzwerke(type='checkbox', name='checkbox_pfalzwerke')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Pfalzwerke AG
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_stadtwerke(type='checkbox', name='checkbox_stadtwerke')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Stadtwerke
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_eigenversorgung(type='checkbox', name='checkbox_eigenversorgung')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Eigene Energiegewinnung
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_sonstiger_energieanbieter(type='checkbox', name='checkbox_sonstiger_energieanbieter')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Sonstige:
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    input#sonstiger_energieanbieter(type='text', name='sonstiger_energieanbieter', size='50')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Welchen Tarif nutzen Sie bei ihrem Anbieter?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#tarif(type='text', name='tarif', size='80', placeholder='Bspw. Profi12 Strom, Gewerbe Strom, E.ON ProfiStrom eFix')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Ist der Gesamtstromverbrauch des Rechenzentrums bekannt?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_stromverbrauch_ja(type='checkbox', name='checkbox_stromverbrauch_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_stromverbrauch_nein(type='checkbox', name='checkbox_stromverbrauch_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Wenn ja, wie hoch ist der Gesamtstromverbrauch des Rechenzentrums?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#gesamtstromverbrauch(type='text', name='gesamtstromverbrauch', size='50', placeholder='Bspw. in kWh/Monat oder MWh/Jahr')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Ist der Gesamtstromverbrauch der Klimatisierung bekannt?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_stromverbrauch_klimatisierung_ja(type='checkbox', name='checkbox_stromverbrauch_klimatisierung_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_stromverbrauch_klimatisierung_nein(type='checkbox', name='checkbox_stromverbrauch_klimatisierung_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Wenn ja, wie hoch ist der Gesamtstromverbrauch des Klimatisierung?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#gesamtstromverbrauch_klimatisierung(type='text', name='gesamtstromverbrauch_klimatisierung', size='50', placeholder='Bspw. in kWh/Monat oder kWh/Jahr')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Welche Leistung hat die USV?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#usv(type='text', name='usv', size='50', placeholder='Angabe in Watt, kW o.ä.')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Werden Stromspartechnologien eingesetzt?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_dynamische_sst(type='checkbox', name='checkbox_dynamische_sst')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label
-                        | Dynamische Stromspartechnologien, die die Frequenz und Spannung der Prozessoren abh&auml;ngig von der Auslastung automatisch regeln
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_energiesparmodus(type='checkbox', name='checkbox_energiesparmodus')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Schalten sich die Server selbstst&auml;ndig in einen Energiesparmodus?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_sonstige_sst(type='checkbox', name='checkbox_sonstige_sst')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Sonstige:
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    input#sonstige_sst(type='text', name='sonstige_sst', size='50')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    b
-                        label Angaben zur Klimatisierung
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Welches Klimasystem wird verwendet? (Mehrfachnennungen m&ouml;glich)
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_zentrale_klimaanlage(type='checkbox', name='checkbox_zentrale_klimaanlage')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Klimatisierung &uuml;ber zentrale Klimaanlage
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_eigenständige_klimaanlage', name='checkbox_eigenständige_klimaanlage')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Eigenst&auml;ndige Klimaanlage
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_umluftklimaschrank(type='checkbox', name='checkbox_umluftklimaschrank')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Umluftklimaschrank im Raum
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_umluftklimaschrank_seperat(type='checkbox', name='checkbox_umluftklimaschrank_seperat')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Umluftklimaschrank in seperatem Raum
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_umluftklimaschrank_außenluftanteil', name='checkbox_umluftklimaschrank:außenluftanteil')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Umluftklimaschrank mit Au&szlig;enluftanteil
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_splitklimageräte', name='checkbox_splitklimageräte')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Splitklimager&auml;te
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_multisplitgeräte', name='checkbox_multisplitgeräte')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Multisplitger&auml;te
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_klimaanlage_außenluftanschluss', name='checkbox_klimaanlage_außenluftanschluss')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Klimaanlage mit direktem Au&szlig;enluftanschluss
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_außenluftanteil_rlt_anlage', name='checkbox_außenluftanteil_rlt_anlage')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Au&szlig;enluftanteil &uuml;ber seperate RLT-Anlage
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_wassergekühlt', name='checkbox_wassergekühlt')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label wassergek&uuml;hlte Racks
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_sonstiges_klimasystem(type='checkbox', name='checkbox_sonstiges_klimasystem')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Sonstiges:
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    input#sonstiges_klimasystem(type='text', name='sonstiges_klimasystem', size='50')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Installierte K&auml;lteleistung im Raum ohne Redundanz
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='text', id='kälteleistung_ohne_redundanz', name='kälteleistung_ohne_redundanz', size='50', placeholder='Angabe in Watt, kW o.ä.')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Installierte K&auml;lteleistung im Raum mit Redundanz
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='text', id='kälteleistung_mit_redundanz', name='kälteleistung_mit_redundanz', size='50', placeholder='Angabe in Watt, kW o.ä.')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Werden nicht ben&ouml;tigte Klimaanlagen ausgeschalten?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_klimaanlagen_ausschalten_ja(type='checkbox', name='checkbox_klimaanlagen_ausschalten_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_klimaanlagen_ausschalten_nein(type='checkbox', name='checkbox_klimaanlagen_ausschalten_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label
-                        | Werden nicht ben&ouml;tigte Klimaanlagen bewusst nicht ausgeschalten, da ein gemeinsamer Betrieb aller Anlagen energieeffizienter ist?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_klimaanlagen_ja(type='checkbox', name='checkbox_klimaanlagen_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_klimaanlagen_nein(type='checkbox', name='checkbox_klimaanlagen_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Eingesetzte K&uuml;hlmedien
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_wasser(type='checkbox', name='checkbox_wasser')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Wasser
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_wasser_glykol(type='checkbox', name='checkbox_wasser_glykol')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Wasser/Glykol Gemisch
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_kältemittel', name='checkbox_kältemittel')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label K&auml;ltemittel (bitte unter Sonstiges angeben)
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_sonstiges_kühlmedien', name='checkbox_sonstiges_kühlmedien')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Sonstiges:
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    input(type='text', id='sonstiges_kühlmedien', name='sonstiges_kühlmedien', size='50')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Wird entstehende Abw&auml;rme genutzt?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_abwärme_ja', name='checkbox_abwärme_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_abwärme_nein', name='checkbox_abwärme_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Wenn ja, wo wird die zur&uuml;ckgewonnene Abw&auml;rme eingesetzt?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='text', id='abwärme', name='abwärme', size='50', placeholder='')
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Wird das Kalt-Warmang-Prinzip eingehalten?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_kaltwarmgang_ja(type='checkbox', name='checkbox_kaltwarmgang_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_kaltwarmgang_nein(type='checkbox', name='checkbox_kaltwarmgang_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Sind Hot Spots/W&auml;rmenester in den Racks vorhanden?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_hotspots_ja(type='checkbox', name='checkbox_hotspots_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_hotspots_nein(type='checkbox', name='checkbox_hotspots_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_hotspots_teilweise(type='checkbox', name='checkbox_hotspots_teilweise')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Teilweise
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label
-                        | Bestehen Hindernisse in der Zuluftf&uuml;hrung? (z.B. Kabeltrassen im Doppelboden, Rohrleitungen, etc.)
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_zuluftführung_ja', name='checkbox_zuluftführung_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_zuluftführung_nein', name='checkbox_zuluftführung_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label
-                        | Bestehen Hindernisse in der Abluftf&uuml;hrung? (z.B. Kan&auml;le, Unterz&uuml;ge, Leuchten, etc.)
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_abluftführung_ja', name='checkbox_abluftführung_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input(type='checkbox', id='checkbox_abluftführung_nein', name='checkbox_abluftführung_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    b
-                        label Infrastruktur/Rackausf&uuml;hrung
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Bereitstellungsverfahren der Anwendungen
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_dezentral(type='checkbox', name='checkbox_dezentral')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Dezentral (PC-Systeme, Notebooks)
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_zentral(type='checkbox', name='checkbox_zentral')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Zentral (Terminalserver, Virtuell, Web)
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Wird Storagevirtualisierung eingesetzt?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_storagevirtualisierung_ja(type='checkbox', name='checkbox_storagevirtualisierung_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_storagevirtualisierung_nein(type='checkbox', name='checkbox_storagevirtualisierung_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label Wird Servervirtualisierung eingesetzt?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_servervirtualisierung_ja(type='checkbox', name='checkbox_servervirtualisierung_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_servervirtualisierung_nein(type='checkbox', name='checkbox_servervirtualisierung_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label
-                        | Ist ein System Management Tool vorhanden, das sich zur Realisierung von Energieeinsparpotenzialen eignet?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_systemmgmttool_ja(type='checkbox', name='checkbox_systemmgmttool_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_systemmgmttool_nein(type='checkbox', name='checkbox_systemmgmttool_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    label
-                        | Wird ein Netzwerk Management Tool verwendet, das sich zur Realisierung von Energieeinsparpotenzialen eignet?
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_netzwerkmgmttool_ja(type='checkbox', name='checkbox_netzwerkmgmttool_ja')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Ja
-                | &#x9;&#x9;&#x9;&#x9;
-                p
-                    input#checkbox_netzwerkmgmttool_nein(type='checkbox', name='checkbox_netzwerkmgmttool_nein')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;
-                    label Nein
-            | &#x9;&#x9;&#x9;
+html
+    body
+        section#survey
+            .container
+                .heading.text-center.center-block
+                    h1#survey Fragebogen
+                    hr
+                    p
+                        | Fragebogen beinhaltet alle für ein Audit relevanten Themen. Diese sind nach ökologischen Aspekten
+                        | gewichtet.
+                .survey
+                    form(action='', method='post')
+                        paper-tabs(layout='', vertical='', selected='0')
+                            paper-tab
+                                core-icon(icon='assignment')
+                                | Allgemeine Daten
+                            paper-tab
+                                core-icon(icon='image:filter-9-plus')
+                                | Zertifizierungen
+                            paper-tab
+                                core-icon(icon='image:flash-on')
+                                | Stromversorgung
+                            paper-tab
+                                core-icon(icon='image:flare')
+                                | Klimatisierung
+                            paper-tab
+                                core-icon(icon='settings')
+                                | Infrastruktur
+                        core-label
+                            h3#general_info Allgemeine Angaben
+                        paper-input-decorator(floatinglabel='', label='Name des Unternehmens')
+                            input#company_name(is='core-input', name='company_name')
+                        paper-input-decorator(floatinglabel='', label='Standort des Rechenzentrums/der Rechenzentren')
+                            input#datacenter_location(is='core-input', name='datacenter_location')
+                        paper-input-decorator(floatinglabel='', label='Anzahl der Serverräume')
+                            input#serverrooms(is='core-input', type='number', name='serverrooms', preventinvalidinput='')
+                        paper-input-decorator(floatinglabel='', label='Anzahl der Server in einem Serverraum')
+                            input#servers_in_serverroom(is='core-input', type='number', name='servers_in_serverroom', preventinvalidinput='')
+                        paper-input-decorator(floatinglabel='', label='Höhe des monatlichen Traffics des Rechenzentrums')
+                            input#datacenter_traffic(is='core-input', name='datacenter_traffic')
+                        paper-input-decorator(floatinglabel='', label='Höhe des monatlichen Traffics eines Servers')
+                            input#server_traffic(is='core-input', name='server_traffic')
+                        core-label
+                            h3#certification Angaben zu Zertifizierungen
+                        paper-input-decorator(label='Haben Sie bereits eine, mehrere oder keine der folgenden Zertifizierungen?')
+                            input(is='core-input')
+                        ul
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_blauer_engel(name='checkbox_blauer_engel')
+                                    |                             Blauer Engel
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_emas(name='checkbox_emas')
+                                    |                             EMAS
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_iso14001(name='checkbox_iso14001')
+                                    |                             ISO 14001
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_iso50001(name='checkbox_iso50001')
+                                    |                             ISO 50001
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_dcsa(name='checkbox_dcsa')
+                                    |                             Datacenter Star Audit (DCSA)
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_keine(name='checkbox_keine')
+                                    |                             Keine Zertifizierung
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_sonstige(name='checkbox_sonstige')
+                                    |                             Sonstige Zertifizierung
+                        paper-input-decorator(floatinglabel='', label='Sonstige Zertifizierung')
+                            input#sonstige(is='core-input', name='sonstige')
+                        core-label
+                            h3#power Angaben zur Stromversorgung
+                        paper-input-decorator(label='Welchen Stromanbieter nutzen Sie?')
+                            input(is='core-input')
+                        ul
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_rwe(name='checkbox_rwe')
+                                    |                             RWE AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_enbw(name='checkbox_enbw')
+                                    |                             EnBW AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_eon(name='checkbox_eon')
+                                    |                             E.ON AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_vattenfall(name='checkbox_vattenfall')
+                                    |                             Vattenfall Europe AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_ewe(name='checkbox_ewe')
+                                    |                             EWE AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_rheinenergie(name='checkbox_rheinenergie')
+                                    |                             RheinEnergie AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_mvv(name='checkbox_mvv')
+                                    |                             MVV Energie AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_nenergie(name='checkbox_nenergie')
+                                    |                             N-Energie AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_pfalzwerke(name='checkbox_pfalzwerke')
+                                    |                             Pfalzwerke AG
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_stadtwerke(name='checkbox_stadtwerke')
+                                    |                             Stadtwerke
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_eigenversorgung(name='checkbox_eigenversorgung')
+                                    |                             Eigene Energiegewinnung
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_sonstiger_energieanbieter(name='checkbox_sonstiger_energieanbieter')
+                                    |                             Sonstiger Energieanbieter
+                        paper-input-decorator(floatinglabel='', label='Sonstiger Energieanbieter')
+                            input#sonstiger_energieanbieter(is='core-input', name='sonstiger_energieanbieter')
+                        paper-input-decorator(floatinglabel='', label='Welchen Tarif nutzen Sie bei ihrem Anbieter?')
+                            input#tarif(is='core-input', name='tarif')
+                        paper-input-decorator(label='Ist der Gesamtstromverbrauch des Rechenzentrums bekannt?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_stromverbrauch_ja(name='checkbox_stromverbrauch_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_stromverbrauch_nein(name='checkbox_stromverbrauch_nein')
+                            |                     Nein
+                        paper-input-decorator(floatinglabel='', label='Wenn ja, wie hoch ist der Gesamtstromverbrauch des Rechenzentrums?')
+                            input#gesamtstromverbrauch(is='core-input', name='gesamtstromverbrauch')
+                        paper-input-decorator(label='Ist der Gesamtstromverbrauch der Klimatisierung bekannt?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_stromverbrauch_klimatisierung_ja(name='checkbox_stromverbrauch_klimatisierung_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_stromverbrauch_klimatisierung_nein(name='checkbox_stromverbrauch_klimatisierung_nein')
+                            |                     Nein
+                        paper-input-decorator(floatinglabel='', label='Wenn ja, wie hoch ist der Gesamtstromverbrauch der Klimatisierung?')
+                            input#gesamtstromverbrauch_klimatisierung(is='core-input', name='gesamtstromverbrauch_klimatisierung')
+                        paper-input-decorator(floatinglabel='', label='Welche Leistung hat die USV?')
+                            input#usv(is='core-input', name='usv')
+                        paper-input-decorator(label='Werden Stromspartechnologien eingesetzt?')
+                            input(is='core-input')
+                        ul
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_dynamische_sst(name='checkbox_dynamische_sst')
+                                    |                             Dynamische Stromspartechnologien, die die Frequenz und Spannung der Prozessoren abhängig von der Auslastung automatisch regeln
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_energiesparmodus(name='checkbox_energiesparmodus')
+                                    |                             Schalten sich die Server selbstständig in einen Energiesparmodus?
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_sonstige_sst(name='checkbox_sonstige_sst')
+                                    |                             Sonstige
+                        paper-input-decorator(floatinglabel='', label='Sonstige Stromspartechnologien')
+                            input#sonstige_stromspartechnologien(is='core-input', name='sonstige_stromspartechnologien')
+                        core-label
+                            h3#cooling Angaben zur Klimatisierung
+                        paper-input-decorator(label='Welches Klimasystem wird verwendet? (Mehrfachnennungen möglich)')
+                            input(is='core-input')
+                        ul
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_zentrale_klimaanlage(name='checkbox_zentrale_klimaanlage')
+                                    |                             Klimatisierung über zentrale Klimaanlage
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_eigenständige_klimaanlage', name='checkbox_eigenständige_klimaanlage')
+                                    |                             Eigenständige Klimaanlage
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_umluftklimaschrank(name='checkbox_umluftklimaschrank')
+                                    |                             Umluftklimaschrank im Raum
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_umluftklimaschrank_seperat(name='checkbox_umluftklimaschrank_seperat')
+                                    |                             Umluftklimaschrank in seperatem Raum
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_umluftklimaschrank_außenluftanteil', name='checkbox_umluftklimaschrank_außenluftanteil')
+                                    |                             Umluftklimaschrank mit Außenluftanteil
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_splitklimageräte', name='checkbox_splitklimageräte')
+                                    |                             Splitklimageräte
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_multisplitgeräte', name='checkbox_multisplitgeräte')
+                                    |                             Multisplitgeräte
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_klimaanlage_außenluftanschluss', name='checkbox_klimaanlage_außenluftanschluss')
+                                    |                             Klimaanlage mit direktem Außenluftanschluss
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_außenluftanteil_rlt_anlage', name='checkbox_außenluftanteil_rlt_anlage')
+                                    |                             Außenluftanteil über seperate RLT-Anlage
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_wassergekühlt', name='checkbox_wassergekühlt')
+                                    |                             Wassergekühlte Racks
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_sonstiges_klimasystem(name='checkbox_sonstiges_klimasystem')
+                                    |                             Sonstiges:
+                        paper-input-decorator(floatinglabel='', label='Sonstige Klimasysteme')
+                            input#sonstige_klimasysteme(is='core-input', name='sonstige_klimasysteme')
+                        paper-input-decorator(floatinglabel='', label='Installierte Kälteleistung im Raum ohne Redundanz')
+                            input(is='core-input', id='kälteleistung_ohne_redundanz', name='kälteleistung_ohne_redundanz')
+                        paper-input-decorator(floatinglabel='', label='Installierte Kälteleistung im Raum mit Redundanz')
+                            input(is='core-input', id='kälteleistung_mit_redundanz', name='kälteleistung_mit_redundanz')
+                        paper-input-decorator(label='Werden nicht benötigte Klimaanlagen ausgeschalten?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_klimaanlagen_ausschalten_ja(name='checkbox_klimaanlagen_ausschalten_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_klimaanlagen_ausschalten_nein(name='checkbox_klimaanlagen_ausschalten_nein')
+                            |                     Nein
+                        paper-input-decorator(label='Werden nicht benötigte Klimaanlagen bewusst nicht ausgeschalten, da ein gemeinsamer Betrieb aller Anlagen energieeffizienter ist?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_klimaanlagen_ja(name='checkbox_klimaanlagen_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_klimaanlagen_nein(name='checkbox_klimaanlagen_nein')
+                            |                     Nein
+                        paper-input-decorator(label='Eingesetzte Kühlmedien')
+                            input(is='core-input')
+                        ul
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_wasser(name='checkbox_wasser')
+                                    |                             Wasser
+                            li
+                                core-label
+                                    paper-checkbox#checkbox_wasser_glykol(name='checkbox_wasser_glykol')
+                                    |                             Wasser/Glykol Gemisch
+                            li
+                                core-label
+                                    paper-checkbox(id='checkbox_kältemittel', name='checkbox_kältemittel')
+                                    |                             Kältemittel (bitte unter dem Punkt Sonstige Kühlmedien angeben)
+                        paper-input-decorator(floatinglabel='', label='Sonstige Kühlmedien')
+                            input(is='core-input', id='sonstige_kühlmedien', name='sonstige_kühlmedien')
+                        paper-input-decorator(label='Wird entstehende Abwärme genutzt?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox(id='checkbox_abwärme_ja', name='checkbox_abwärme_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox(id='checkbox_abwärme_nein', name='checkbox_abwärme_nein')
+                            |                     Nein
+                        paper-input-decorator(floatinglabel='', label='Wenn ja, wo wird die zurückgewonnene Abwärme eingesetzt?')
+                            input(is='core-input', id='abwärme', name='abwärme')
+                        paper-input-decorator(label='Wird das Kalt-Warmgang-Prinzip eingehalten?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_kaltwarmgang_ja(name='checkbox_kaltwarmgang_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_kaltwarmgang_nein(name='checkbox_kaltwarmgang_nein')
+                            |                     Nein
+                        paper-input-decorator(label='Sind Hot Spots/Wärmenester in den Racks vorhanden?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_hotspots_ja(name='checkbox_hotspots_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_hotspots_nein(name='checkbox_hotspots_nein')
+                            |                     Nein
+                        core-label
+                            paper-checkbox#checkbox_hotspots_teilweise(name='checkbox_hotspots_teilweise')
+                            |                     Teilweise
+                        paper-input-decorator(label='Bestehen Hindernisse in der Zuluftführung? (z.B. Kabeltrassen im Doppelboden, Rohrleitungen, etc.)')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox(id='checkbox_zuluftführung_ja', name='checkbox_zuluftführung_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox(id='checkbox_zuluftführung_nein', name='checkbox_zuluftführung_nein')
+                            |                     Nein
+                        paper-input-decorator(label='Bestehen Hindernisse in der Abluftführung? (z.B. Kanäle, Unterzüge, Leuchten, etc.)')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox(id='checkbox_abluftführung_ja', name='checkbox_abluftführung_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox(id='checkbox_abluftführung_nein', name='checkbox_abluftführung_nein')
+                            |                     Nein
+                        core-label
+                            h3#infrastructure Infrastruktur/Rackausführung
+                        paper-input-decorator(label='Bereitstellungsverfahren der Anwendungen')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_dezentral(name='checkbox_dezentral')
+                            |                     Dezentral (PC-Systeme, Notebooks)
+                        core-label
+                            paper-checkbox#checkbox_zentral(name='checkbox_zentral')
+                            |                     Zentral (Terminalserver, Virtuell, Web)
+                        paper-input-decorator(label='Wird Storagevirtualisierung eingesetzt?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_storagevirtualisierung_ja(name='checkbox_storagevirtualisierung_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_storagevirtualisierung_nein(name='checkbox_storagevirtualisierung_nein')
+                            |                     Nein
+                        paper-input-decorator(label='Wird Servervirtualisierung eingesetzt?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_servervirtualisierung_ja(name='checkbox_servervirtualisierung_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_servervirtualisierung_nein(name='checkbox_servervirtualisierung_nein')
+                            |                     Nein
+                        paper-input-decorator(label='Ist ein System Management Tool vorhanden, das sich zur Realisierung von Energieeinsparpotenzialen eignet?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_systemmgmttool_ja(name='checkbox_systemmgmttool_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_systemmgmttool_nein(name='checkbox_systemmgmttool_nein')
+                            |                     Nein
+                        paper-input-decorator(label='Wird ein Netzwerk Management Tool verwendet, das sich zur Realisierung von Energieeinsparpotenzialen eignet?')
+                            input(is='core-input')
+                        core-label
+                            paper-checkbox#checkbox_netzwerkmgmttool_ja(name='checkbox_netzwerkmgmttool_ja')
+                            |                     Ja
+                        core-label
+                            paper-checkbox#checkbox_netzwerkmgmttool_nein(name='checkbox_netzwerkmgmttool_nein')
+                            |                     Nein
