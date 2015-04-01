@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/survey.css">
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCC9SXblH8n9ofoI4jgyt5t-AtrE3yWKpk"></script>
     <script src="js/map.js"></script>
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
@@ -72,534 +73,572 @@
         <div class="survey">
             <form action="" method="post">
 
-                <paper-tabs layout vertical selected="0">
-                    <paper-tab><core-icon icon="assignment"></core-icon>Allgemeine Daten</paper-tab>
-                    <paper-tab><core-icon icon="image:filter-9-plus"></core-icon>Zertifizierungen</paper-tab>
-                    <paper-tab><core-icon icon="image:flash-on"></core-icon>Stromversorgung</paper-tab>
-                    <paper-tab><core-icon icon="image:flare"></core-icon>Klimatisierung</paper-tab>
-                    <paper-tab><core-icon icon="settings"></core-icon>Infrastruktur</paper-tab>
+                <paper-tabs selected="0" link>
+                    <paper-tab id="tab_general">
+                        <a href="#general_info" horizontal center-center layout>
+                                Allgemeines
+                            <core-icon icon="assignment"></core-icon>
+                        </a>
+                    </paper-tab>
+
+                    <paper-tab id="tab_certification">
+                        <a href="#certification" horizontal center-center layout>
+                                Zertifizierungen
+                            <core-icon icon="image:filter-9-plus"></core-icon>
+                        </a>
+                    </paper-tab>
+
+                    <paper-tab id="tab_power">
+                        <a href="#power" horizontal center-center layout>
+                                Stromversorgung
+                            <core-icon icon="image:flash-on"></core-icon>
+                        </a>
+                    </paper-tab>
+
+                    <paper-tab id="tab_cooling">
+                        <a href="#cooling" horizontal center-center layout>
+                                Klimatisierung
+                            <core-icon icon="image:flare"></core-icon>
+                        </a>
+                    </paper-tab>
+
+                    <paper-tab id="tab_infrastructure">
+                        <a href="#infrastructure" horizontal center-center layout>
+                                Infrastruktur
+                            <core-icon icon="settings"></core-icon>
+                        </a>
+                    </paper-tab>
                 </paper-tabs>
 
-                <core-label><h3 id="general_info">Allgemeine Angaben</h3></core-label>
+                <div id="general_info" class="general_info"><br><br>
 
-                <paper-input-decorator floatingLabel label="Name des Unternehmens">
-                    <input is="core-input" id="company_name" name="company_name">
-                </paper-input-decorator>
+                    <core-label><h3 id="headline_general_info">Allgemeine Angaben</h3></core-label>
 
-                <paper-input-decorator floatingLabel label="Standort des Rechenzentrums/der Rechenzentren">
-                    <input is="core-input" id="datacenter_location" name="datacenter_location">
-                </paper-input-decorator>
+                    <paper-input-decorator floatingLabel label="Name des Unternehmens">
+                        <input is="core-input" id="company_name" name="company_name">
+                    </paper-input-decorator>
 
-                <paper-input-decorator floatingLabel label="Anzahl der Serverräume">
-                    <input is="core-input" type="number" id="serverrooms" name="serverrooms" preventInvalidInput>
-                </paper-input-decorator>
+                    <paper-input-decorator floatingLabel label="Standort des Rechenzentrums/der Rechenzentren">
+                        <input is="core-input" id="datacenter_location" name="datacenter_location">
+                    </paper-input-decorator>
 
-                <paper-input-decorator floatingLabel label="Anzahl der Server in einem Serverraum">
-                    <input is="core-input" type="number" id="servers_in_serverroom" name="servers_in_serverroom" preventInvalidInput>
-                </paper-input-decorator>
+                    <paper-input-decorator floatingLabel label="Anzahl der Serverräume">
+                        <input is="core-input" type="number" id="serverrooms" name="serverrooms" preventInvalidInput>
+                    </paper-input-decorator>
 
-                <paper-input-decorator floatingLabel label="Höhe des monatlichen Traffics des Rechenzentrums">
-                    <input is="core-input" id="datacenter_traffic" name="datacenter_traffic">
-                </paper-input-decorator>
+                    <paper-input-decorator floatingLabel label="Anzahl der Server in einem Serverraum">
+                        <input is="core-input" type="number" id="servers_in_serverroom" name="servers_in_serverroom" preventInvalidInput>
+                    </paper-input-decorator>
 
-                <paper-input-decorator floatingLabel label="Höhe des monatlichen Traffics eines Servers">
-                    <input is="core-input" id="server_traffic" name="server_traffic">
-                </paper-input-decorator>
+                    <paper-input-decorator floatingLabel label="Höhe des monatlichen Traffics des Rechenzentrums">
+                        <input is="core-input" id="datacenter_traffic" name="datacenter_traffic">
+                    </paper-input-decorator>
 
-                <core-label><h3 id="certification">Angaben zu Zertifizierungen</h3></core-label>
+                    <paper-input-decorator floatingLabel label="Höhe des monatlichen Traffics eines Servers">
+                        <input is="core-input" id="server_traffic" name="server_traffic">
+                    </paper-input-decorator>
 
-                <paper-input-decorator label="Haben Sie bereits eine, mehrere oder keine der folgenden Zertifizierungen?">
-                    <input is="core-input">
-                </paper-input-decorator>
-                <ul>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_blauer_engel" name="checkbox_blauer_engel"></paper-checkbox>
-                            Blauer Engel
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_emas" name="checkbox_emas"></paper-checkbox>
-                            EMAS
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_iso14001" name="checkbox_iso14001"></paper-checkbox>
-                            ISO 14001
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_iso50001" name="checkbox_iso50001"></paper-checkbox>
-                            ISO 50001
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_dcsa" name="checkbox_dcsa"></paper-checkbox>
-                            Datacenter Star Audit (DCSA)
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_keine" name="checkbox_keine"></paper-checkbox>
-                            Keine Zertifizierung
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_sonstige" name="checkbox_sonstige"></paper-checkbox>
-                            Sonstige Zertifizierung
-                        </core-label>
-                    </li>
-                </ul>
-                <paper-input-decorator floatingLabel label="Sonstige Zertifizierung">
-                    <input is="core-input" id="sonstige" name="sonstige">
-                </paper-input-decorator>
+                </div>
 
-                <core-label><h3 id="power">Angaben zur Stromversorgung</h3></core-label>
+                <div id="certification" class="certification"><br><br>
 
-                <paper-input-decorator label="Welchen Stromanbieter nutzen Sie?">
-                    <input is="core-input">
-                </paper-input-decorator>
-                <ul>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_rwe" name="checkbox_rwe"></paper-checkbox>
-                            RWE AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_enbw" name="checkbox_enbw"></paper-checkbox>
-                            EnBW AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_eon" name="checkbox_eon"></paper-checkbox>
-                            E.ON AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_vattenfall" name="checkbox_vattenfall"></paper-checkbox>
-                            Vattenfall Europe AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_ewe" name="checkbox_ewe"></paper-checkbox>
-                            EWE AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_rheinenergie" name="checkbox_rheinenergie"></paper-checkbox>
-                            RheinEnergie AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_mvv" name="checkbox_mvv"></paper-checkbox>
-                            MVV Energie AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_nenergie" name="checkbox_nenergie"></paper-checkbox>
-                            N-Energie AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_pfalzwerke" name="checkbox_pfalzwerke"></paper-checkbox>
-                            Pfalzwerke AG
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_stadtwerke" name="checkbox_stadtwerke"></paper-checkbox>
-                            Stadtwerke
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_eigenversorgung" name="checkbox_eigenversorgung"></paper-checkbox>
-                            Eigene Energiegewinnung
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_sonstiger_energieanbieter" name="checkbox_sonstiger_energieanbieter"></paper-checkbox>
-                            Sonstiger Energieanbieter
-                        </core-label>
-                    </li>
-                </ul>
-                <paper-input-decorator floatingLabel label="Sonstiger Energieanbieter">
-                    <input is="core-input" id="sonstiger_energieanbieter" name="sonstiger_energieanbieter">
-                </paper-input-decorator>
+                    <core-label><h3 id="headline_certification">Angaben zu Zertifizierungen</h3></core-label>
 
-                <paper-input-decorator floatingLabel label="Welchen Tarif nutzen Sie bei ihrem Anbieter?">
-                    <input is="core-input" id="tarif" name="tarif">
-                </paper-input-decorator>
+                    <core-label>
+                        Haben Sie bereits eine, mehrere oder keine der folgenden Zertifizierungen?
+                    </core-label><br><br>
 
-                <paper-input-decorator label="Ist der Gesamtstromverbrauch des Rechenzentrums bekannt?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                            <core-label>
+                                <paper-checkbox id="checkbox_blauer_engel" name="checkbox_blauer_engel" value="15"></paper-checkbox>
+                                Blauer Engel
+                            </core-label><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_stromverbrauch_ja" name="checkbox_stromverbrauch_ja"></paper-checkbox>
-                    Ja
-                </core-label>
-                <core-label>
-                    <paper-checkbox id="checkbox_stromverbrauch_nein" name="checkbox_stromverbrauch_nein"></paper-checkbox>
-                    Nein
-                </core-label>
-                <paper-input-decorator floatingLabel label="Wenn ja, wie hoch ist der Gesamtstromverbrauch des Rechenzentrums?">
-                    <input is="core-input" id="gesamtstromverbrauch" name="gesamtstromverbrauch">
-                </paper-input-decorator>
+                            <core-label>
+                                <paper-checkbox id="checkbox_emas" name="checkbox_emas" value="15"></paper-checkbox>
+                                EMAS
+                            </core-label><br>
 
-                <paper-input-decorator label="Ist der Gesamtstromverbrauch der Klimatisierung bekannt?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                            <core-label>
+                                <paper-checkbox id="checkbox_iso14001" name="checkbox_iso14001" value="25"></paper-checkbox>
+                                ISO 14001
+                            </core-label><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_stromverbrauch_klimatisierung_ja" name="checkbox_stromverbrauch_klimatisierung_ja"></paper-checkbox>
-                    Ja
-                </core-label>
-                <core-label>
-                    <paper-checkbox id="checkbox_stromverbrauch_klimatisierung_nein" name="checkbox_stromverbrauch_klimatisierung_nein"></paper-checkbox>
-                    Nein
-                </core-label>
-                <paper-input-decorator floatingLabel label="Wenn ja, wie hoch ist der Gesamtstromverbrauch der Klimatisierung?">
-                    <input is="core-input" id="gesamtstromverbrauch_klimatisierung" name="gesamtstromverbrauch_klimatisierung">
-                </paper-input-decorator>
+                            <core-label>
+                                <paper-checkbox id="checkbox_iso50001" name="checkbox_iso50001" value="25"></paper-checkbox>
+                                ISO 50001
+                            </core-label><br>
 
-                <paper-input-decorator floatingLabel label="Welche Leistung hat die USV?">
-                    <input is="core-input" id="usv" name="usv">
-                </paper-input-decorator>
+                            <core-label>
+                                <paper-checkbox id="checkbox_dcsa" name="checkbox_dcsa" value="15"></paper-checkbox>
+                                Datacenter Star Audit (DCSA)
+                            </core-label><br>
 
-                <paper-input-decorator label="Werden Stromspartechnologien eingesetzt?">
-                    <input is="core-input">
-                </paper-input-decorator>
-                <ul>
-                    <li>
+                            <core-label>
+                                <paper-checkbox id="checkbox_keine" name="checkbox_keine" value="0"></paper-checkbox>
+                                Keine Zertifizierung
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_sonstige" name="checkbox_sonstige" value="5"></paper-checkbox>
+                                Sonstige Zertifizierung:
+                            </core-label>
+
+                    <paper-input-decorator floatingLabel label="Sonstige Zertifizierung">
+                        <input is="core-input" id="sonstige" name="sonstige">
+                    </paper-input-decorator>
+
+                </div>
+
+                <div id="power" class="power"><br><br>
+
+                    <core-label><h3 id="headline_power">Angaben zur Stromversorgung</h3></core-label>
+
+                    <core-label>
+                        Welchen Stromanbieter nutzen Sie?
+                    </core-label><br><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_rwe" name="checkbox_rwe" value="6"></paper-checkbox>
+                                RWE AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_enbw" name="checkbox_enbw" value="7"></paper-checkbox>
+                                EnBW AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_eon" name="checkbox_eon" value="8"></paper-checkbox>
+                                E.ON AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_vattenfall" name="checkbox_vattenfall" value="1"></paper-checkbox>
+                                Vattenfall Europe AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_ewe" name="checkbox_ewe" value="5"></paper-checkbox>
+                                EWE AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_rheinenergie" name="checkbox_rheinenergie" value="3"></paper-checkbox>
+                                RheinEnergie AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_mvv" name="checkbox_mvv" value="2"></paper-checkbox>
+                                MVV Energie AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_nenergie" name="checkbox_nenergie" value="5"></paper-checkbox>
+                                N-Energie AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_pfalzwerke" name="checkbox_pfalzwerke" value="4"></paper-checkbox>
+                                Pfalzwerke AG
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_stadtwerke" name="checkbox_stadtwerke" value="6"></paper-checkbox>
+                                Stadtwerke
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_eigenversorgung" name="checkbox_eigenversorgung" value="6"></paper-checkbox>
+                                Eigene Energiegewinnung
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_sonstiger_energieanbieter" name="checkbox_sonstiger_energieanbieter"></paper-checkbox>
+                                Sonstiger Energieanbieter
+                            </core-label>
+
+                    <paper-input-decorator floatingLabel label="Sonstiger Energieanbieter">
+                        <input is="core-input" id="sonstiger_energieanbieter" name="sonstiger_energieanbieter">
+                    </paper-input-decorator>
+
+                    <paper-input-decorator floatingLabel label="Welchen Tarif nutzen Sie bei ihrem Anbieter?">
+                        <input is="core-input" id="tarif" name="tarif">
+                    </paper-input-decorator>
+
+                    <core-label>
+                        Ist der Gesamtstromverbrauch des Rechenzentrums bekannt?
+                    </core-label><br><br>
+
+                    <core-label>
+                        <paper-checkbox id="checkbox_stromverbrauch_ja" name="checkbox_stromverbrauch_ja" value="1"></paper-checkbox>
+                        Ja
+                    </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_stromverbrauch_nein" name="checkbox_stromverbrauch_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label>
+                    <paper-input-decorator floatingLabel label="Wenn ja, wie hoch ist der Gesamtstromverbrauch des Rechenzentrums?">
+                        <input is="core-input" id="gesamtstromverbrauch" name="gesamtstromverbrauch">
+                    </paper-input-decorator>
+
+                    <core-label>
+                        Ist der Gesamtstromverbrauch der Klimatisierung bekannt?
+                    </core-label><br><br>
+
+                    <core-label>
+                        <paper-checkbox id="checkbox_stromverbrauch_klimatisierung_ja" name="checkbox_stromverbrauch_klimatisierung_ja" value="1"></paper-checkbox>
+                        Ja
+                    </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_stromverbrauch_klimatisierung_nein" name="checkbox_stromverbrauch_klimatisierung_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label>
+                    <paper-input-decorator floatingLabel label="Wenn ja, wie hoch ist der Gesamtstromverbrauch der Klimatisierung?">
+                        <input is="core-input" id="gesamtstromverbrauch_klimatisierung" name="gesamtstromverbrauch_klimatisierung">
+                    </paper-input-decorator>
+
+                    <paper-input-decorator floatingLabel label="Welche Leistung hat die USV?">
+                        <input is="core-input" id="usv" name="usv">
+                    </paper-input-decorator>
+
+                    <core-label>
+                        Werden Stromspartechnologien eingesetzt?
+                    </core-label><br><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_dynamische_sst" name="checkbox_dynamische_sst" value="1"></paper-checkbox>
+                                Dynamische Stromspartechnologien, die die Frequenz und Spannung der Prozessoren abhängig von der Auslastung automatisch regeln
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_energiesparmodus" name="checkbox_energiesparmodus" value="2"></paper-checkbox>
+                                Schalten sich die Server selbstständig in einen Energiesparmodus?
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_sonstige_sst" name="checkbox_sonstige_sst"></paper-checkbox>
+                                Sonstige Stromspartechnologien:
+                            </core-label>
+
+                    <paper-input-decorator floatingLabel label="Sonstige Stromspartechnologien">
+                        <input is="core-input" id="sonstige_stromspartechnologien" name="sonstige_stromspartechnologien">
+                    </paper-input-decorator>
+
+                </div>
+
+                <div id="cooling" class="cooling"><br><br>
+
+                    <core-label><h3 id="headline_cooling">Angaben zur Klimatisierung</h3></core-label>
+
+                    <core-label>
+                        Welches Klimasystem wird verwendet? (Mehrfachnennungen möglich)
+                    </core-label><br><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_zentrale_klimaanlage" name="checkbox_zentrale_klimaanlage" value="2"></paper-checkbox>
+                                Klimatisierung über zentrale Klimaanlage
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_eigenständige_klimaanlage" name="checkbox_eigenständige_klimaanlage" value="2"></paper-checkbox>
+                                Eigenständige Klimaanlage
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_umluftklimaschrank" name="checkbox_umluftklimaschrank" value="2"></paper-checkbox>
+                                Umluftklimaschrank im Raum
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_umluftklimaschrank_seperat" name="checkbox_umluftklimaschrank_seperat" value="2"></paper-checkbox>
+                                Umluftklimaschrank in seperatem Raum
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_umluftklimaschrank_außenluftanteil" name="checkbox_umluftklimaschrank_außenluftanteil" value="3"></paper-checkbox>
+                                Umluftklimaschrank mit Außenluftanteil
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_splitklimageräte" name="checkbox_splitklimageräte" value="3"></paper-checkbox>
+                                Splitklimageräte
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_multisplitgeräte" name="checkbox_multisplitgeräte" value="3"></paper-checkbox>
+                                Multisplitgeräte
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_klimaanlage_außenluftanschluss" name="checkbox_klimaanlage_außenluftanschluss" value="3"></paper-checkbox>
+                                Klimaanlage mit direktem Außenluftanschluss
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_außenluftanteil_rlt_anlage" name="checkbox_außenluftanteil_rlt_anlage" value="3"></paper-checkbox>
+                                Außenluftanteil über seperate RLT-Anlage
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_wassergekühlt" name="checkbox_wassergekühlt" value="-1"></paper-checkbox>
+                                Wassergekühlte Racks
+                            </core-label><br>
+
+                            <core-label>
+                                <paper-checkbox id="checkbox_sonstiges_klimasystem" name="checkbox_sonstiges_klimasystem"></paper-checkbox>
+                                Sonstige Klimasysteme:
+                            </core-label>
+
+                    <paper-input-decorator floatingLabel label="Sonstige Klimasysteme">
+                        <input is="core-input" id="sonstige_klimasysteme" name="sonstige_klimasysteme">
+                    </paper-input-decorator>
+
+                    <paper-input-decorator floatingLabel label="Installierte Kälteleistung im Raum ohne Redundanz">
+                        <input is="core-input" id="kälteleistung_ohne_redundanz" name="kälteleistung_ohne_redundanz">
+                    </paper-input-decorator>
+
+                    <paper-input-decorator floatingLabel label="Installierte Kälteleistung im Raum mit Redundanz">
+                        <input is="core-input" id="kälteleistung_mit_redundanz" name="kälteleistung_mit_redundanz">
+                    </paper-input-decorator>
+
+                    <core-label>
+                        Werden nicht benötigte Klimaanlagen ausgeschalten?
+                    </core-label><br><br>
+
+                    <core-label>
+                        <paper-checkbox id="checkbox_klimaanlagen_ausschalten_ja" name="checkbox_klimaanlagen_ausschalten_ja" value="1"></paper-checkbox>
+                        Ja
+                    </core-label>
+
+                    <core-label>
+                        <paper-checkbox id="checkbox_klimaanlagen_ausschalten_nein" name="checkbox_klimaanlagen_ausschalten_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label><br><br>
+
+                    <core-label>
+                        Werden nicht benötigte Klimaanlagen bewusst nicht ausgeschalten, da ein gemeinsamer Betrieb aller Anlagen energieeffizienter ist?
+                    </core-label><br><br>
+
+                    <core-label>
+                        <paper-checkbox id="checkbox_klimaanlagen_ja" name="checkbox_klimaanlagen_ja" value="1"></paper-checkbox>
+                        Ja
+                    </core-label>
+
+                    <core-label>
+                        <paper-checkbox id="checkbox_klimaanlagen_nein" name="checkbox_klimaanlagen_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label><br><br>
+
+                    <core-label>
+                        Eingesetzte Kühlmedien
+                    </core-label><br><br>
+
                         <core-label>
-                            <paper-checkbox id="checkbox_dynamische_sst" name="checkbox_dynamische_sst"></paper-checkbox>
-                            Dynamische Stromspartechnologien, die die Frequenz und Spannung der Prozessoren abhängig von der Auslastung automatisch regeln
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_energiesparmodus" name="checkbox_energiesparmodus"></paper-checkbox>
-                            Schalten sich die Server selbstständig in einen Energiesparmodus?
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_sonstige_sst" name="checkbox_sonstige_sst"></paper-checkbox>
-                            Sonstige
-                        </core-label>
-                    </li>
-                </ul>
-                <paper-input-decorator floatingLabel label="Sonstige Stromspartechnologien">
-                    <input is="core-input" id="sonstige_stromspartechnologien" name="sonstige_stromspartechnologien">
-                </paper-input-decorator>
-
-                <core-label><h3 id="cooling">Angaben zur Klimatisierung</h3></core-label>
-
-                <paper-input-decorator label="Welches Klimasystem wird verwendet? (Mehrfachnennungen möglich)">
-                    <input is="core-input">
-                </paper-input-decorator>
-
-                <ul>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_zentrale_klimaanlage" name="checkbox_zentrale_klimaanlage"></paper-checkbox>
-                            Klimatisierung über zentrale Klimaanlage
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_eigenständige_klimaanlage" name="checkbox_eigenständige_klimaanlage"></paper-checkbox>
-                            Eigenständige Klimaanlage
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_umluftklimaschrank" name="checkbox_umluftklimaschrank"></paper-checkbox>
-                            Umluftklimaschrank im Raum
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_umluftklimaschrank_seperat" name="checkbox_umluftklimaschrank_seperat"></paper-checkbox>
-                            Umluftklimaschrank in seperatem Raum
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_umluftklimaschrank_außenluftanteil" name="checkbox_umluftklimaschrank_außenluftanteil"></paper-checkbox>
-                            Umluftklimaschrank mit Außenluftanteil
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_splitklimageräte" name="checkbox_splitklimageräte"></paper-checkbox>
-                            Splitklimageräte
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_multisplitgeräte" name="checkbox_multisplitgeräte"></paper-checkbox>
-                            Multisplitgeräte
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_klimaanlage_außenluftanschluss" name="checkbox_klimaanlage_außenluftanschluss"></paper-checkbox>
-                            Klimaanlage mit direktem Außenluftanschluss
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_außenluftanteil_rlt_anlage" name="checkbox_außenluftanteil_rlt_anlage"></paper-checkbox>
-                            Außenluftanteil über seperate RLT-Anlage
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_wassergekühlt" name="checkbox_wassergekühlt"></paper-checkbox>
-                            Wassergekühlte Racks
-                        </core-label>
-                    </li>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_sonstiges_klimasystem" name="checkbox_sonstiges_klimasystem"></paper-checkbox>
-                            Sonstiges:
-                        </core-label>
-                    </li>
-                </ul>
-                <paper-input-decorator floatingLabel label="Sonstige Klimasysteme">
-                    <input is="core-input" id="sonstige_klimasysteme" name="sonstige_klimasysteme">
-                </paper-input-decorator>
-
-                <paper-input-decorator floatingLabel label="Installierte Kälteleistung im Raum ohne Redundanz">
-                    <input is="core-input" id="kälteleistung_ohne_redundanz" name="kälteleistung_ohne_redundanz">
-                </paper-input-decorator>
-
-                <paper-input-decorator floatingLabel label="Installierte Kälteleistung im Raum mit Redundanz">
-                    <input is="core-input" id="kälteleistung_mit_redundanz" name="kälteleistung_mit_redundanz">
-                </paper-input-decorator>
-
-                <paper-input-decorator label="Werden nicht benötigte Klimaanlagen ausgeschalten?">
-                    <input is="core-input">
-                </paper-input-decorator>
-
-                <core-label>
-                    <paper-checkbox id="checkbox_klimaanlagen_ausschalten_ja" name="checkbox_klimaanlagen_ausschalten_ja"></paper-checkbox>
-                    Ja
-                </core-label>
-
-                <core-label>
-                    <paper-checkbox id="checkbox_klimaanlagen_ausschalten_nein" name="checkbox_klimaanlagen_ausschalten_nein"></paper-checkbox>
-                    Nein
-                </core-label>
-
-                <paper-input-decorator label="Werden nicht benötigte Klimaanlagen bewusst nicht ausgeschalten, da ein gemeinsamer Betrieb aller Anlagen energieeffizienter ist?">
-                    <input is="core-input">
-                </paper-input-decorator>
-
-                <core-label>
-                    <paper-checkbox id="checkbox_klimaanlagen_ja" name="checkbox_klimaanlagen_ja"></paper-checkbox>
-                    Ja
-                </core-label>
-
-                <core-label>
-                    <paper-checkbox id="checkbox_klimaanlagen_nein" name="checkbox_klimaanlagen_nein"></paper-checkbox>
-                    Nein
-                </core-label>
-
-                <paper-input-decorator label="Eingesetzte Kühlmedien">
-                    <input is="core-input">
-                </paper-input-decorator>
-                <ul>
-                    <li>
-                        <core-label>
-                            <paper-checkbox id="checkbox_wasser" name="checkbox_wasser"></paper-checkbox>
+                            <paper-checkbox id="checkbox_wasser" name="checkbox_wasser" value="5"></paper-checkbox>
                             Wasser
-                        </core-label>
-                    </li>
-                    <li>
+                        </core-label><br>
+
                         <core-label>
-                            <paper-checkbox id="checkbox_wasser_glykol" name="checkbox_wasser_glykol"></paper-checkbox>
+                            <paper-checkbox id="checkbox_wasser_glykol" name="checkbox_wasser_glykol" value="5"></paper-checkbox>
                             Wasser/Glykol Gemisch
-                        </core-label>
-                    </li>
-                    <li>
+                        </core-label><br>
+
+                        <core-label>
+                            <paper-checkbox id="checkbox_r22" name="checkbox_r22" value="3"></paper-checkbox>
+                            R22
+                        </core-label><br>
+
+                        <core-label>
+                            <paper-checkbox id="checkbox_r407c" name="checkbox_r407c" value="2"></paper-checkbox>
+                            R407C
+                        </core-label><br>
+
+                        <core-label>
+                            <paper-checkbox id="checkbox_r410a" name="checkbox_r410a" value="1"></paper-checkbox>
+                            R410A
+                        </core-label><br>
+
+                        <core-label>
+                            <paper-checkbox id="checkbox_r134a" name="checkbox_r134a" value="1"></paper-checkbox>
+                            R134A
+                        </core-label><br>
+
+                        <core-label>
+                            <paper-checkbox id="checkbox_r744" name="checkbox_r744" value="4"></paper-checkbox>
+                            R744
+                        </core-label><br>
+
                         <core-label>
                             <paper-checkbox id="checkbox_kältemittel" name="checkbox_kältemittel"></paper-checkbox>
                             Kältemittel (bitte unter dem Punkt Sonstige Kühlmedien angeben)
-                        </core-label>
-                    </li>
-                </ul>
-                <paper-input-decorator floatingLabel label="Sonstige Kühlmedien">
-                    <input is="core-input" id="sonstige_kühlmedien" name="sonstige_kühlmedien">
-                </paper-input-decorator>
+                        </core-label><br>
 
-                <paper-input-decorator label="Wird entstehende Abwärme genutzt?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                    <paper-input-decorator floatingLabel label="Sonstige Kühlmedien">
+                        <input is="core-input" id="sonstige_kühlmedien" name="sonstige_kühlmedien">
+                    </paper-input-decorator>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_abwärme_ja" name="checkbox_abwärme_ja"></paper-checkbox>
-                    Ja
-                </core-label>
+                    <core-label>
+                        Wird entstehende Abwärme genutzt?
+                    </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_abwärme_nein" name="checkbox_abwärme_nein"></paper-checkbox>
-                    Nein
-                </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_abwärme_ja" name="checkbox_abwärme_ja"></paper-checkbox>
+                        Ja
+                    </core-label>
 
-                <paper-input-decorator floatingLabel label="Wenn ja, wo wird die zurückgewonnene Abwärme eingesetzt?">
-                    <input is="core-input" id="abwärme" name="abwärme">
-                </paper-input-decorator>
+                    <core-label>
+                        <paper-checkbox id="checkbox_abwärme_nein" name="checkbox_abwärme_nein"></paper-checkbox>
+                        Nein
+                    </core-label><br><br>
 
-                <paper-input-decorator label="Wird das Kalt-Warmgang-Prinzip eingehalten?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                    <paper-input-decorator floatingLabel label="Wenn ja, wo wird die zurückgewonnene Abwärme eingesetzt?">
+                        <input is="core-input" id="abwärme" name="abwärme">
+                    </paper-input-decorator>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_kaltwarmgang_ja" name="checkbox_kaltwarmgang_ja"></paper-checkbox>
-                    Ja
-                </core-label>
+                    <core-label>
+                        Wird das Kalt-Warmgang-Prinzip eingehalten?
+                    </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_kaltwarmgang_nein" name="checkbox_kaltwarmgang_nein"></paper-checkbox>
-                    Nein
-                </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_kaltwarmgang_ja" name="checkbox_kaltwarmgang_ja" value="1"></paper-checkbox>
+                        Ja
+                    </core-label>
 
-                <paper-input-decorator label="Sind Hot Spots/Wärmenester in den Racks vorhanden?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                    <core-label>
+                        <paper-checkbox id="checkbox_kaltwarmgang_nein" name="checkbox_kaltwarmgang_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_hotspots_ja" name="checkbox_hotspots_ja"></paper-checkbox>
-                    Ja
-                </core-label>
+                    <core-label>
+                        Sind Hot Spots/Wärmenester in den Racks vorhanden?
+                    </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_hotspots_nein" name="checkbox_hotspots_nein"></paper-checkbox>
-                    Nein
-                </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_hotspots_ja" name="checkbox_hotspots_ja" value="-1"></paper-checkbox>
+                        Ja
+                    </core-label>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_hotspots_teilweise" name="checkbox_hotspots_teilweise"></paper-checkbox>
-                    Teilweise
-                </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_hotspots_nein" name="checkbox_hotspots_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label>
 
-                <paper-input-decorator label="Bestehen Hindernisse in der Zuluftführung? (z.B. Kabeltrassen im Doppelboden, Rohrleitungen, etc.)">
-                    <input is="core-input">
-                </paper-input-decorator>
+                    <core-label>
+                        <paper-checkbox id="checkbox_hotspots_teilweise" name="checkbox_hotspots_teilweise" value="-0.5"></paper-checkbox>
+                        Teilweise
+                    </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_zuluftführung_ja" name="checkbox_zuluftführung_ja"></paper-checkbox>
-                    Ja
-                </core-label>
+                    <core-label>
+                        Bestehen Hindernisse in der Zuluftführung? (z.B. Kabeltrassen im Doppelboden, Rohrleitungen, etc.)
+                    </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_zuluftführung_nein" name="checkbox_zuluftführung_nein"></paper-checkbox>
-                    Nein
-                </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_zuluftführung_ja" name="checkbox_zuluftführung_ja" value="-1"></paper-checkbox>
+                        Ja
+                    </core-label>
 
-                <paper-input-decorator label="Bestehen Hindernisse in der Abluftführung? (z.B. Kanäle, Unterzüge, Leuchten, etc.)">
-                    <input is="core-input">
-                </paper-input-decorator>
+                    <core-label>
+                        <paper-checkbox id="checkbox_zuluftführung_nein" name="checkbox_zuluftführung_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_abluftführung_ja" name="checkbox_abluftführung_ja"></paper-checkbox>
-                    Ja
-                </core-label>
+                    <core-label>
+                        Bestehen Hindernisse in der Abluftführung? (z.B. Kanäle, Unterzüge, Leuchten, etc.)
+                     </core-label><br><br>
 
-                <core-label>
-                    <paper-checkbox id="checkbox_abluftführung_nein" name="checkbox_abluftführung_nein"></paper-checkbox>
-                    Nein
-                </core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_abluftführung_ja" name="checkbox_abluftführung_ja" value="-1"></paper-checkbox>
+                        Ja
+                    </core-label>
 
-                <core-label><h3 id="infrastructure">Infrastruktur/Rackausführung</h3></core-label>
+                    <core-label>
+                        <paper-checkbox id="checkbox_abluftführung_nein" name="checkbox_abluftführung_nein" value="0"></paper-checkbox>
+                        Nein
+                    </core-label><br><br>
+                </div>
 
-                <paper-input-decorator label="Bereitstellungsverfahren der Anwendungen">
-                    <input is="core-input">
-                </paper-input-decorator>
+            <div id="infrastructure" class="infrastructure"><br><br>
+
+                <core-label><h3 id="headline_infrastructure">Infrastruktur/Rackausführung</h3></core-label>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_dezentral" name="checkbox_dezentral"></paper-checkbox>
+                    Bereitstellungsverfahren der Anwendungen
+                </core-label><br><br>
+
+                <core-label>
+                    <paper-checkbox id="checkbox_dezentral" name="checkbox_dezentral" value="0"></paper-checkbox>
                     Dezentral (PC-Systeme, Notebooks)
-                </core-label>
+                </core-label><br>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_zentral" name="checkbox_zentral"></paper-checkbox>
+                    <paper-checkbox id="checkbox_zentral" name="checkbox_zentral" value="1"></paper-checkbox>
                     Zentral (Terminalserver, Virtuell, Web)
-                </core-label>
-
-                <paper-input-decorator label="Wird Storagevirtualisierung eingesetzt?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                </core-label><br><br>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_storagevirtualisierung_ja" name="checkbox_storagevirtualisierung_ja"></paper-checkbox>
+                    Wird Storagevirtualisierung eingesetzt?
+                </core-label><br><br>
+
+                <core-label>
+                    <paper-checkbox id="checkbox_storagevirtualisierung_ja" name="checkbox_storagevirtualisierung_ja" value="1"></paper-checkbox>
                     Ja
                 </core-label>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_storagevirtualisierung_nein" name="checkbox_storagevirtualisierung_nein"></paper-checkbox>
+                    <paper-checkbox id="checkbox_storagevirtualisierung_nein" name="checkbox_storagevirtualisierung_nein" value="0"></paper-checkbox>
                     Nein
-                </core-label>
-
-                <paper-input-decorator label="Wird Servervirtualisierung eingesetzt?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                </core-label><br><br>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_servervirtualisierung_ja" name="checkbox_servervirtualisierung_ja"></paper-checkbox>
+                    Wird Servervirtualisierung eingesetzt?
+                </core-label><br><br>
+
+                <core-label>
+                    <paper-checkbox id="checkbox_servervirtualisierung_ja" name="checkbox_servervirtualisierung_ja" value="1"></paper-checkbox>
                     Ja
                 </core-label>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_servervirtualisierung_nein" name="checkbox_servervirtualisierung_nein"></paper-checkbox>
+                    <paper-checkbox id="checkbox_servervirtualisierung_nein" name="checkbox_servervirtualisierung_nein" value="0"></paper-checkbox>
                     Nein
-                </core-label>
-
-                <paper-input-decorator label="Ist ein System Management Tool vorhanden, das sich zur Realisierung von Energieeinsparpotenzialen eignet?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                </core-label><br><br>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_systemmgmttool_ja" name="checkbox_systemmgmttool_ja"></paper-checkbox>
+                    Ist ein System Management Tool vorhanden, das sich zur Realisierung von Energieeinsparpotenzialen eignet?
+                </core-label><br><br>
+
+                <core-label>
+                    <paper-checkbox id="checkbox_systemmgmttool_ja" name="checkbox_systemmgmttool_ja" value="1"></paper-checkbox>
                     Ja
                 </core-label>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_systemmgmttool_nein" name="checkbox_systemmgmttool_nein"></paper-checkbox>
+                    <paper-checkbox id="checkbox_systemmgmttool_nein" name="checkbox_systemmgmttool_nein" value="0"></paper-checkbox>
                     Nein
-                </core-label>
-
-                <paper-input-decorator label="Wird ein Netzwerk Management Tool verwendet, das sich zur Realisierung von Energieeinsparpotenzialen eignet?">
-                    <input is="core-input">
-                </paper-input-decorator>
+                </core-label><br><br>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_netzwerkmgmttool_ja" name="checkbox_netzwerkmgmttool_ja"></paper-checkbox>
+                    Wird ein Netzwerk Management Tool verwendet, das sich zur Realisierung von Energieeinsparpotenzialen eignet?
+                </core-label><br><br>
+
+                <core-label>
+                    <paper-checkbox id="checkbox_netzwerkmgmttool_ja" name="checkbox_netzwerkmgmttool_ja" value="1"></paper-checkbox>
                     Ja
                 </core-label>
 
                 <core-label>
-                    <paper-checkbox id="checkbox_netzwerkmgmttool_nein" name="checkbox_netzwerkmgmttool_nein"></paper-checkbox>
+                    <paper-checkbox id="checkbox_netzwerkmgmttool_nein" name="checkbox_netzwerkmgmttool_nein" value="0"></paper-checkbox>
                     Nein
-                </core-label>
+                </core-label><br><br>
+
+                <div vertical layout center id="button" class="button">
+                <core-label>
+                    <paper-button id="btn_senden" name="btn_senden">
+                        <span flex>Formular senden</span>
+                    </paper-button>
+                </core-label><br>
+                </div>
+            </div>
             </form>
         </div>
     </div>
