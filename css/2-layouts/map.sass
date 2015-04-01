@@ -1,3 +1,6 @@
+html,body
+  height: 100%
+
 section
   font-family: "Roboto 2", "Helvetica Neue", Helvetica, Arial, sans-serif
   color: #777777
@@ -29,3 +32,40 @@ section
 .map-canvas
   height: 90vh
   background-color: aqua
+
+//infowindow
+.map-floatmenu
+  height: 100%
+  width: 400px
+  position: absolute
+  float: right
+  background-color: #ffffff
+
+.chart
+  position: relative
+  display: inline-block
+  width: 120px
+  /* SHOUL BE EQUAL - Like 200px */
+  height: 120px
+  /* SHOUL BE EQUAL - Like 200px */
+  margin-top: 10px
+  margin-bottom: 30px
+  text-align: center
+
+.chart canvas
+  position: absolute
+  top: 0
+  left: 0
+
+.percent
+  display: inline-block
+  line-height: 120px
+  /* SHOUL BE EQUAL - Like 200px */
+  z-index: 2
+  font-size: 1.5em
+
+.percent:after
+  content: '%'
+  margin-left: 0.1em
+  font-size: 1em
+
