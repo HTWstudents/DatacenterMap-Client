@@ -80,6 +80,21 @@ function geocode(oldData) {
 
 }
 
+function addressToLatLng(address) {
+    var LatLng = [];
+    geocoder.geocode({
+        'address': address
+    }, function (results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            LatLng[0] = results[0].geometry.location.lat();
+            LatLng[1] = results[0].geometry.location.lng();
+            return LatLng;
+        }
+        else return ( alert("Something went wrong!"));
+    });
+}
+
+
 function writeData() {
 
     //write new Datacenter Objects to File
