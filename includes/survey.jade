@@ -31,23 +31,31 @@ html
                                 a(href='#infrastructure', horizontal='', center-center='', layout='')
                                     | Infrastruktur
                                     core-icon(icon='settings')
+
+                    template(is='auto-binding')
+
                         #general_info.general_info
                             br
                             br
                             core-label
                                 h3#headline_general_info Allgemeine Angaben
-                            paper-input-decorator(floatinglabel='', label='Name des Unternehmens')
-                                input#company_name(is='core-input', name='company_name')
-                            paper-input-decorator(floatinglabel='', label='Standort des Rechenzentrums/der Rechenzentren')
-                                input#datacenter_location(is='core-input', name='datacenter_location')
-                            paper-input-decorator(floatinglabel='', label='Anzahl der Serverräume')
-                                input#serverrooms(is='core-input', type='number', name='serverrooms', preventinvalidinput='')
-                            paper-input-decorator(floatinglabel='', label='Anzahl der Server in einem Serverraum')
-                                input#servers_in_serverroom(is='core-input', type='number', name='servers_in_serverroom', preventinvalidinput='')
-                            paper-input-decorator(floatinglabel='', label='Höhe des monatlichen Traffics des Rechenzentrums')
-                                input#datacenter_traffic(is='core-input', name='datacenter_traffic')
-                            paper-input-decorator(floatinglabel='', label='Höhe des monatlichen Traffics eines Servers')
-                                input#server_traffic(is='core-input', name='server_traffic')
+                            paper-input-decorator(floatinglabel='', label='Name des Unternehmens', error='Es sind nur Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input#company_name(is='core-input', name='company_name', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
+
+                            paper-input-decorator(floatinglabel='', label='Standort des Rechenzentrums/der Rechenzentren', error='Es sind nur Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input#datacenter_location(is='core-input', name='datacenter_location', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
+
+                            paper-input-decorator(floatinglabel='', label='Anzahl der Serverräume', error='Es sind nur Zahlen erlaubt')
+                                input#serverrooms(is='core-input', type='number', name='serverrooms', pattern='[0-9]*' on-input='{{inputAction}}')
+
+                            paper-input-decorator(floatinglabel='', label='Anzahl der Server in einem Serverraum', error='Es sind nur Zahlen erlaubt')
+                                input#servers_in_serverroom(is='core-input', type='number', name='servers_in_serverroom', pattern='[0-9]*' on-input='{{inputAction}}')
+
+                            paper-input-decorator(floatinglabel='', label='Höhe des monatlichen Traffics des Rechenzentrums in Gigabyte pro Monat', error='Es sind nur Zahlen erlaubt')
+                                input#datacenter_traffic(is='core-input', name='datacenter_traffic', pattern='[0-9]*' on-input='{{inputAction}}')
+
+                            paper-input-decorator(floatinglabel='', label='Höhe des durchschnittlichen, monatlichen Traffics eines Servers in Gigabyte pro Monat', error='Es sind nur Zahlen erlaubt')
+                                input#server_traffic(is='core-input', name='server_traffic', pattern='[0-9]*' on-input='{{inputAction}}')
                         #certification.certification
                             br
                             br
@@ -84,8 +92,8 @@ html
                             core-label
                                 paper-checkbox#checkbox_sonstige(name='checkbox_sonstige', value='5')
                                 |                                 Sonstige Zertifizierung:
-                            paper-input-decorator(floatinglabel='', label='Sonstige Zertifizierung')
-                                input#sonstige(is='core-input', name='sonstige')
+                            paper-input-decorator(floatinglabel='', label='Sonstige Zertifizierung', error='Es sind Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input#sonstige(is='core-input', name='sonstige', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
                         #power.power
                             br
                             br
@@ -142,10 +150,10 @@ html
                             core-label
                                 paper-checkbox#checkbox_sonstiger_energieanbieter(name='checkbox_sonstiger_energieanbieter')
                                 |                                 Sonstiger Energieanbieter
-                            paper-input-decorator(floatinglabel='', label='Sonstiger Energieanbieter')
-                                input#sonstiger_energieanbieter(is='core-input', name='sonstiger_energieanbieter')
-                            paper-input-decorator(floatinglabel='', label='Welchen Tarif nutzen Sie bei ihrem Anbieter?')
-                                input#tarif(is='core-input', name='tarif')
+                            paper-input-decorator(floatinglabel='', label='Sonstiger Energieanbieter', error='Es sind Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input#sonstiger_energieanbieter(is='core-input', name='sonstiger_energieanbieter', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
+                            paper-input-decorator(floatinglabel='', label='Welchen Tarif nutzen Sie bei ihrem Anbieter?', error='Es sind Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input#tarif(is='core-input', name='tarif', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
                             core-label
                                 | Ist der Gesamtstromverbrauch des Rechenzentrums bekannt?
                             br
@@ -156,8 +164,8 @@ html
                             core-label
                                 paper-checkbox#checkbox_stromverbrauch_nein(name='checkbox_stromverbrauch_nein', value='0')
                                 |                         Nein
-                            paper-input-decorator(floatinglabel='', label='Wenn ja, wie hoch ist der Gesamtstromverbrauch des Rechenzentrums?')
-                                input#gesamtstromverbrauch(is='core-input', name='gesamtstromverbrauch')
+                            paper-input-decorator(floatinglabel='', label='Wenn ja, wie hoch ist der Gesamtstromverbrauch des Rechenzentrums in kW/h?', error='Es sind nur Zahlen erlaubt')
+                                input#gesamtstromverbrauch(is='core-input', name='gesamtstromverbrauch', pattern='[0-9]*' on-input='{{inputAction}}')
                             core-label
                                 | Ist der Gesamtstromverbrauch der Klimatisierung bekannt?
                             br
@@ -168,10 +176,10 @@ html
                             core-label
                                 paper-checkbox#checkbox_stromverbrauch_klimatisierung_nein(name='checkbox_stromverbrauch_klimatisierung_nein', value='0')
                                 |                         Nein
-                            paper-input-decorator(floatinglabel='', label='Wenn ja, wie hoch ist der Gesamtstromverbrauch der Klimatisierung?')
-                                input#gesamtstromverbrauch_klimatisierung(is='core-input', name='gesamtstromverbrauch_klimatisierung')
-                            paper-input-decorator(floatinglabel='', label='Welche Leistung hat die USV?')
-                                input#usv(is='core-input', name='usv')
+                            paper-input-decorator(floatinglabel='', label='Wenn ja, wie hoch ist der Gesamtstromverbrauch der Klimatisierung in kW/h?', error='Es sind nur Zahlen erlaubt')
+                                input#gesamtstromverbrauch_klimatisierung(is='core-input', name='gesamtstromverbrauch_klimatisierung', pattern='[0-9]*' on-input='{{inputAction}}')
+                            paper-input-decorator(floatinglabel='', label='Welche Leistung hat die USV in Watt?', error='Es sind nur Zahlen erlaubt')
+                                input#usv(is='core-input', name='usv', pattern='[0-9]*' on-input='{{inputAction}}')
                             core-label
                                 | Werden Stromspartechnologien eingesetzt?
                             br
@@ -187,8 +195,8 @@ html
                             core-label
                                 paper-checkbox#checkbox_sonstige_sst(name='checkbox_sonstige_sst')
                                 |                                 Sonstige Stromspartechnologien:
-                            paper-input-decorator(floatinglabel='', label='Sonstige Stromspartechnologien')
-                                input#sonstige_stromspartechnologien(is='core-input', name='sonstige_stromspartechnologien')
+                            paper-input-decorator(floatinglabel='', label='Sonstige Stromspartechnologien', error='Es sind Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input#sonstige_stromspartechnologien(is='core-input', name='sonstige_stromspartechnologien', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
                         #cooling.cooling
                             br
                             br
@@ -241,12 +249,12 @@ html
                             core-label
                                 paper-checkbox#checkbox_sonstiges_klimasystem(name='checkbox_sonstiges_klimasystem')
                                 |                                 Sonstige Klimasysteme:
-                            paper-input-decorator(floatinglabel='', label='Sonstige Klimasysteme')
-                                input#sonstige_klimasysteme(is='core-input', name='sonstige_klimasysteme')
-                            paper-input-decorator(floatinglabel='', label='Installierte Kälteleistung im Raum ohne Redundanz')
-                                input(is='core-input', id='kälteleistung_ohne_redundanz', name='kälteleistung_ohne_redundanz')
-                            paper-input-decorator(floatinglabel='', label='Installierte Kälteleistung im Raum mit Redundanz')
-                                input(is='core-input', id='kälteleistung_mit_redundanz', name='kälteleistung_mit_redundanz')
+                            paper-input-decorator(floatinglabel='', label='Sonstige Klimasysteme', error='Es sind Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input#sonstige_klimasysteme(is='core-input', name='sonstige_klimasysteme', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
+                            paper-input-decorator(floatinglabel='', label='Installierte Kälteleistung im Raum ohne Redundanz in Watt', error='Es sind nur Zahlen erlaubt')
+                                input(is='core-input', id='kälteleistung_ohne_redundanz', name='kälteleistung_ohne_redundanz', pattern='[0-9]*' on-input='{{inputAction}}')
+                            paper-input-decorator(floatinglabel='', label='Installierte Kälteleistung im Raum mit Redundanz in Watt', error='Es sind nur Zahlen erlaubt')
+                                input(is='core-input', id='kälteleistung_mit_redundanz', name='kälteleistung_mit_redundanz', pattern='[0-9]*' on-input='{{inputAction}}')
                             core-label
                                 | Werden nicht benötigte Klimaanlagen ausgeschalten?
                             br
@@ -307,8 +315,8 @@ html
                                 paper-checkbox(id='checkbox_kältemittel', name='checkbox_kältemittel')
                                 |                             Kältemittel (bitte unter dem Punkt Sonstige Kühlmedien angeben)
                             br
-                            paper-input-decorator(floatinglabel='', label='Sonstige Kühlmedien')
-                                input(is='core-input', id='sonstige_kühlmedien', name='sonstige_kühlmedien')
+                            paper-input-decorator(floatinglabel='', label='Sonstige Kühlmedien', error='Es sind Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input(is='core-input', id='sonstige_kühlmedien', name='sonstige_kühlmedien', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
                             core-label
                                 | Wird entstehende Abwärme genutzt?
                             br
@@ -321,8 +329,8 @@ html
                                 |                         Nein
                             br
                             br
-                            paper-input-decorator(floatinglabel='', label='Wenn ja, wo wird die zurückgewonnene Abwärme eingesetzt?')
-                                input(is='core-input', id='abwärme', name='abwärme')
+                            paper-input-decorator(floatinglabel='', label='Wenn ja, wo wird die zurückgewonnene Abwärme eingesetzt?', error='Es sind Buchstaben, Zahlen, Leerzeichen, Bindestriche, Kommata und Punkte erlaubt')
+                                input(is='core-input', id='abwärme', name='abwärme', pattern='[A-z0-9äöüÄÖÜß&., \-]*' on-input='{{inputAction}}')
                             core-label
                                 | Wird das Kalt-Warmgang-Prinzip eingehalten?
                             br
@@ -445,3 +453,8 @@ html
                                     paper-button#btn_senden(name='btn_senden')
                                         span(flex='') Formular senden
                                 br
+                        script.
+                            var scope = document.querySelector('template[is=auto-binding]');
+                            scope.inputAction = function (e) {
+                            ($(event.target).parent())[0].isInvalid = !e.target.validity.valid;
+                            }
