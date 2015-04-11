@@ -109,58 +109,78 @@ section {
   margin-left: 0.1em;
   font-size: 1em; }
 
-section.survey {
-  height: 100vh;
-  background: peachpuff; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
 
-paper-button {
-  background: midnightblue;
-  color: #FFF; }
+/* General styles and layout */
+section#survey_general_info {
+  padding: 20px;
+  padding-bottom: 75px;
+  background: #76b900;
+  color: #fff; }
 
-core-icon[icon="assignment"] {
-  color: #b2ff59;
-  height: 40px;
-  width: 40px; }
+section#survey_certification {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 65px;
+  background: #5e9400;
+  color: #fff; }
 
-core-icon[icon="image:filter-9-plus"] {
-  color: #ffc107;
-  height: 40px;
-  width: 40px; }
+section#survey_power {
+  padding: 20px;
+  padding-bottom: 75px;
+  background: #76b900;
+  color: #fff; }
 
-core-icon[icon="image:flash-on"] {
-  color: #ffff00;
-  height: 40px;
-  width: 40px; }
+section#survey_cooling {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 65px;
+  background: #5e9400;
+  color: #fff; }
 
-core-icon[icon="image:flare"] {
-  color: #18ffff;
-  height: 40px;
-  width: 40px; }
+section#survey_infrastructure {
+  padding: 20px;
+  padding-bottom: 75px;
+  background: #76b900;
+  color: #fff; }
 
-core-icon[icon="settings"] {
-  color: #536dfe;
-  height: 40px;
-  width: 40px; }
+.container {
+  overflow: hidden; }
 
-#general_info {
-  background: #b2ff59;
-  color: #3f3f3f; }
+/* we don't want the pseudo-elements sticking out */
+/*** Individual section styles and separators ** */
+/* Common style for pseudo-elements */
+section#survey_certification::before, section#survey_certification::after {
+  position: absolute;
+  content: "";
+  pointer-events: none; }
 
-#certification {
-  background: #ffc107;
-  color: #3f3f3f; }
+section#survey_cooling::before, section#survey_cooling::after {
+  position: absolute;
+  content: "";
+  pointer-events: none; }
 
-#power {
-  background: #ffff00;
-  color: #3f3f3f; }
-
-#cooling {
-  background: #18ffff;
-  color: #3f3f3f; }
-
-#infrastructure {
-  background: #536dfe;
-  color: #3f3f3f; }
+/* Triangles */
+.ss-style-triangles::before, .ss-style-triangles::after {
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg); }
+.ss-style-triangles::before {
+  top: -50px;
+  background: #5e9400; }
+.ss-style-triangles::after {
+  bottom: -50px;
+  z-index: 10;
+  background: inherit; }
 
 .paper {
   height: 100vh; }

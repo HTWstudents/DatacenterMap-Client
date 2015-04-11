@@ -1,52 +1,85 @@
-section.survey
-  height: 100vh
-  background: peachpuff
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:after, &::before
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
-paper-button
-  background: midnightblue
-  color: #FFF
+/* General styles and layout
 
-core-icon[icon="assignment"]
-  color: #b2ff59
-  height: 40px
-  width: 40px
+$section-light:#76b900
+$section-dark:#5e9400
+$section-separator:#91c733
+$section-text:#fff
 
-core-icon[icon="image:filter-9-plus"]
-  color: #ffc107
-  height: 40px
-  width: 40px
+section#survey_general_info
+  padding: 20px
+  padding-bottom: 75px
+  background: $section-light
+  color: $section-text
 
-core-icon[icon="image:flash-on"]
-  color: #ffff00
-  height: 40px
-  width: 40px
+section#survey_certification
+  position: relative
+  padding: 20px
+  padding-bottom: 65px
+  background: $section-dark
+  color: $section-text
 
-core-icon[icon="image:flare"]
-  color: #18ffff
-  height: 40px
-  width: 40px
+section#survey_power
+  padding: 20px
+  padding-bottom: 75px
+  background: $section-light
+  color: $section-text
 
-core-icon[icon="settings"]
-  color: #536dfe
-  height: 40px
-  width: 40px
+section#survey_cooling
+  position: relative
+  padding: 20px
+  padding-bottom: 65px
+  background: $section-dark
+  color: $section-text
 
-#general_info
-  background: #b2ff59
-  color: #3f3f3f
+section#survey_infrastructure
+  padding: 20px
+  padding-bottom: 75px
+  background: $section-light
+  color: $section-text
 
-#certification
-  background: #ffc107
-  color: #3f3f3f
+.container
+  overflow: hidden
+/* we don't want the pseudo-elements sticking out
 
-#power
-  background: #ffff00
-  color: #3f3f3f
+/*** Individual section styles and separators **
 
-#cooling
-  background: #18ffff
-  color: #3f3f3f
+/* Common style for pseudo-elements
 
-#infrastructure
-  background: #536dfe
-  color: #3f3f3f
+section#survey_certification
+  &::before, &::after
+    position: absolute
+    content: ''
+    pointer-events: none
+
+
+section#survey_cooling
+  &::before, &::after
+    position: absolute
+    content: ''
+    pointer-events: none
+
+/* Triangles
+
+.ss-style-triangles
+  &::before, &::after
+    left: 50%
+    width: 100px
+    height: 100px
+    -webkit-transform: translateX(-50%) rotate(45deg)
+    transform: translateX(-50%) rotate(45deg)
+  &::before
+    top: -50px
+    background: $section-dark
+  &::after
+    bottom: -50px
+    z-index: 10
+    background: inherit
