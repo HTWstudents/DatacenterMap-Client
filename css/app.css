@@ -109,9 +109,78 @@ section {
   margin-left: 0.1em;
   font-size: 1em; }
 
-section.survey {
-  height: 100vh;
-  background: peachpuff; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* General styles and layout */
+section#survey_general_info {
+  padding: 20px;
+  padding-bottom: 75px;
+  background: #76b900;
+  color: #fff; }
+
+section#survey_certification {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 65px;
+  background: #5e9400;
+  color: #fff; }
+
+section#survey_power {
+  padding: 20px;
+  padding-bottom: 75px;
+  background: #76b900;
+  color: #fff; }
+
+section#survey_cooling {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 65px;
+  background: #5e9400;
+  color: #fff; }
+
+section#survey_infrastructure {
+  padding: 20px;
+  padding-bottom: 75px;
+  background: #76b900;
+  color: #fff; }
+
+.container {
+  overflow: hidden; }
+
+/* we don't want the pseudo-elements sticking out */
+/*** Individual section styles and separators ** */
+/* Common style for pseudo-elements */
+section#survey_certification::before, section#survey_certification::after {
+  position: absolute;
+  content: "";
+  pointer-events: none; }
+
+section#survey_cooling::before, section#survey_cooling::after {
+  position: absolute;
+  content: "";
+  pointer-events: none; }
+
+/* Triangles */
+.ss-style-triangles::before, .ss-style-triangles::after {
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg); }
+.ss-style-triangles::before {
+  top: -50px;
+  background: #5e9400; }
+.ss-style-triangles::after {
+  bottom: -50px;
+  z-index: 10;
+  background: inherit; }
 
 .paper {
   height: 100vh; }

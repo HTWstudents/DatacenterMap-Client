@@ -1,3 +1,64 @@
+paper-button {
+    background: midnightblue;
+    color: #FFF;
+}
+
+
+core-icon[icon="assignment"] {
+    color: #b2ff59;
+    height: 40px;
+    width: 40px;
+}
+
+core-icon[icon="image:filter-9-plus"] {
+    color: #ffc107;
+    height: 40px;
+    width: 40px;
+}
+
+core-icon[icon="image:flash-on"] {
+    color: #ffff00;
+    height: 40px;
+    width: 40px;
+}
+
+core-icon[icon="image:flare"] {
+    color: #18ffff;
+    height: 40px;
+    width: 40px;
+}
+
+core-icon[icon="settings"] {
+    color: #536dfe;
+    height: 40px;
+    width: 40px;
+}
+
+#general_info {
+    background: #b2ff59;
+    color: #3f3f3f;
+}
+
+#certification {
+    background: #ffc107;
+    color: #3f3f3f;
+}
+
+#power {
+    background: #ffff00;
+    color: #3f3f3f;
+}
+
+#cooling {
+    background: #18ffff;
+    color: #3f3f3f;
+}
+
+#infrastructure {
+    background: #536dfe;
+    color: #3f3f3f;
+}
+
 
 
 /*# sourceMappingURL=survey.css.map */
