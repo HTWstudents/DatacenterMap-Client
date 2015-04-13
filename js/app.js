@@ -184,6 +184,6 @@ app.controller('calendarCtrl', function($scope, $rootScope, surveyService){
     // TODO workflow to change certain fields in a survey
     $scope.put = function(post)	{
         surveyService.delete({id: post._id});
-        $scope.posts = postService.query();
+        $scope.posts = surveyService.query();
     };
 });
