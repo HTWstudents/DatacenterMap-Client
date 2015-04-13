@@ -12,11 +12,54 @@
 $section-light:#76b900
 $section-dark:#5e9400
 $section-separator:#91c733
-$section-text:#fff
+$section-text:#F1F8E9
+
+paper-input-decorator[focused] /deep/
+  .floated-label
+    .label-text
+      color: $section-text
+  .floating-label
+    .label-text
+      color: $section-text
+
+paper-input-decorator /deep/
+  .unfocused-underline
+    background-color: $section-text
+  .focused-underline
+    background-color: $section-text
+  ::-webkit-input-placeholder
+    color: $section-text
+
+paper-button
+  background: $section-dark
+  color: $section-text
+
+core-icon
+  &[icon="assignment"]
+    color: $section-light
+    height: 40px
+    width: 40px
+  &[icon="image:filter-9-plus"]
+    color: $section-dark
+    height: 40px
+    width: 40px
+  &[icon="image:flash-on"]
+    color: $section-light
+    height: 40px
+    width: 40px
+  &[icon="image:flare"]
+    color: $section-dark
+    height: 40px
+    width: 40px
+  &[icon="settings"]
+    color: $section-light
+    height: 40px
+    width: 40px
 
 section#survey_general_info
   padding: 20px
   padding-bottom: 75px
+  padding-top: 40px
   background: $section-light
   color: $section-text
 
@@ -24,12 +67,14 @@ section#survey_certification
   position: relative
   padding: 20px
   padding-bottom: 65px
+  padding-top: 40px
   background: $section-dark
   color: $section-text
 
 section#survey_power
   padding: 20px
   padding-bottom: 75px
+  padding-top: 40px
   background: $section-light
   color: $section-text
 
@@ -37,12 +82,14 @@ section#survey_cooling
   position: relative
   padding: 20px
   padding-bottom: 65px
+  padding-top: 40px
   background: $section-dark
   color: $section-text
 
 section#survey_infrastructure
   padding: 20px
   padding-bottom: 75px
+  padding-top: 40px
   background: $section-light
   color: $section-text
 
