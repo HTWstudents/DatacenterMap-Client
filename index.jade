@@ -16,16 +16,9 @@ html(lang="de")
 
     body(onload="initialize()" ng-app="benchmarkApp")
 
-        <!-- include separately designed sections -->
         include includes/header
-        .container-fluid.ng-view
-            h4 this is the ng-view element
-        include includes/intro
-        include includes/map
-        include includes/survey
-        include includes/paper
-        include includes/footer
-            
+        .ng-view
+
         <!-- load script here to improve page rendering time -->
         // google maps API V3
         script(src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCC9SXblH8n9ofoI4jgyt5t-AtrE3yWKpk")

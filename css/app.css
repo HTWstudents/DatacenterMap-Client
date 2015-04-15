@@ -189,4 +189,18 @@ footer {
   height: 300px;
   background: yellow; }
 
+.odd {
+  background: #5e9400; }
+
+.even {
+  background: #76b900; }
+
+#btn-login {
+  background: transparent;
+  color: grey; }
+
+#btn-register {
+  background: transparent;
+  color: grey; }
+
 /*# sourceMappingURL=app.css.map */

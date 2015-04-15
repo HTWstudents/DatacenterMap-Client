@@ -1,0 +1,13 @@
+section.login
+   .col-md-offset-3.col-md-6.col-sm-offset-2.col-sm-8
+      form(ng-submit='login()')
+         h2 Anmeldung
+         p.text-warning {{error_message}}
+         paper-input-decorator(floatinglabel='', label='Username')
+            input(type="username" ng-model="user.username" placeholder="Username")
+         paper-input-decorator(floatinglabel='', label='Passwort')
+            input(type="password" ng-model="user.password" placeholder="Password")
+         button.btn.btn-default.pull-right#btn-login(type='submit', name='btn_submit')
+            span Anmelden
+
+

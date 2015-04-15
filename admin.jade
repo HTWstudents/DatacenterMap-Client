@@ -1,0 +1,16 @@
+section.admin
+   .col-md-offset-3.col-md-6.col-sm-offset-2.col-sm-8
+      form.form-auth(ng-submit='register()')
+      h2 Verwaltung
+      p.text-warning {{error_message}}
+      paper-input-decorator(floatinglabel='', label='Username')
+         input(type="username" ng-model="user.username" placeholder="Username")
+      paper-input-decorator(floatinglabel='', label='Passwort')
+         input(type="password" ng-model="user.password" placeholder="Password")
+      paper-button.raised.pull-right#btn-register(type='submit' name='btn_submit')
+         span registrieren
+
+      .userList(ng-repeat="user in users | oderBy:'created_at' :true" ng-class-odd='odd' ng-class-even='even')
+         p {{user.forname}} {{user.lastname}}
+
+

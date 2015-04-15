@@ -21,16 +21,20 @@ var app = angular.module('benchmarkApp', ['ngRoute', 'ngResource']).run(function
 app.config(function($routeProvider){
     $routeProvider
         .when('/', {
-            templateUrl: 'main.html',
+            templateUrl: 'landing.html',
             controller: 'mainController'
         })
         .when('/login', {
             templateUrl: 'login.html',
-            controller: 'authController'
+            controller: 'authCtrl'
+        })
+        .when('/content', {
+            templateUrl: 'content.html',
+            controller: 'contentCtrl'
         })
         .when('/admin', {
             templateUrl: 'admin.html',
-            controller: 'authController'
+            controller: 'authCtrl'
         });
 });
 
@@ -69,16 +73,16 @@ app.controller('mainCtrl', function($scope){
  * User can not register by theirselves. Only an admin can register or delete User
  */
 app.controller('authCtrl', function($scope, $http, $rootScope, $location){
-    $scope.user = {username: '', password: ''};
+    $scope.user = {username: 'name', password: 'pass'};
     $scope.error_message = '';
 
     // TODO Login in with given Credentials
     $scope.login = function(){
-        $http.post('/auth/login', $scope.user).success(function(data){
+        $http.post('http://localhost:6767/auth/login', $scope.user).success(function(data){
             if(data.state == 'success'){
                 $rootScope.authenticated = true;
                 $rootScope.current_user = data.user.username;
-                $location.path('/');
+                $location.path('/content');
             }
             else{
                 $scope.error_message = data.message;
@@ -113,6 +117,13 @@ app.controller('authCtrl', function($scope, $http, $rootScope, $location){
             }
         });
     };
+});
+
+/**
+ * Controller handling content
+ */
+app.controller('contentCtrl', function($scope, $rootScope){
+
 });
 
 /**

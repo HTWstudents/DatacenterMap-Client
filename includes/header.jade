@@ -1,4 +1,4 @@
-header
+header(ng-controller='mainCtrl')
     nav.navbar.navbar-default.navbar-fixed-top
         .container-fluid
             .navbar-header
@@ -12,10 +12,12 @@ header
             .navbar-collapse.collapse(id="navbar")
                 ul.nav.navbar-nav.navbar-right
                     li
-                        a(href="#intro") Intro
+                        a(href="#map" ng-hide='authenticated') Karte
                     li
-                        a(href="#map") Karte
+                        a(href='#survey' ng-hide='authenticated') Fragebogen
                     li
-                        a(href="#survey") Fragebogen
+                        a(href='#paper', ng-hide='authenticated') Bericht
                     li
-                        a(href="#paper") Bericht
+                        a(href='#/login', ng-hide='authenticated') Anmelden
+                    li
+                        a(href='#', onclick='guestAuth', ng-hide='authenticated') Gast
