@@ -119,37 +119,79 @@ section {
     box-sizing: border-box; }
 
 /* General styles and layout */
+paper-input-decorator[focused] /deep/ .floated-label .label-text {
+  color: #F1F8E9; }
+paper-input-decorator[focused] /deep/ .floating-label .label-text {
+  color: #F1F8E9; }
+
+paper-input-decorator /deep/ .unfocused-underline {
+  background-color: #F1F8E9; }
+paper-input-decorator /deep/ .focused-underline {
+  background-color: #F1F8E9; }
+paper-input-decorator /deep/ ::-webkit-input-placeholder {
+  color: #F1F8E9; }
+
+paper-button {
+  background: #5e9400;
+  color: #F1F8E9; }
+
+core-icon[icon="assignment"] {
+  color: #76b900;
+  height: 40px;
+  width: 40px; }
+core-icon[icon="image:filter-9-plus"] {
+  color: #5e9400;
+  height: 40px;
+  width: 40px; }
+core-icon[icon="image:flash-on"] {
+  color: #76b900;
+  height: 40px;
+  width: 40px; }
+core-icon[icon="image:flare"] {
+  color: #5e9400;
+  height: 40px;
+  width: 40px; }
+core-icon[icon="settings"] {
+  color: #76b900;
+  height: 40px;
+  width: 40px; }
+
 section#survey_general_info {
   padding: 20px;
   padding-bottom: 75px;
+  padding-top: 40px;
   background: #76b900;
-  color: #fff; }
+  color: #F1F8E9; }
 
 section#survey_certification {
   position: relative;
   padding: 20px;
   padding-bottom: 65px;
+  padding-top: 40px;
   background: #5e9400;
-  color: #fff; }
+  color: #F1F8E9; }
 
 section#survey_power {
   padding: 20px;
   padding-bottom: 75px;
+  padding-top: 40px;
   background: #76b900;
-  color: #fff; }
+  color: #F1F8E9; }
 
 section#survey_cooling {
   position: relative;
   padding: 20px;
   padding-bottom: 65px;
+  padding-top: 40px;
   background: #5e9400;
-  color: #fff; }
+  color: #F1F8E9; }
 
 section#survey_infrastructure {
   padding: 20px;
   padding-bottom: 75px;
+  padding-top: 40px;
   background: #76b900;
-  color: #fff; }
+  color: #F1F8E9; }
 
 .container {
   overflow: hidden; }
